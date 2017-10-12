@@ -26,7 +26,7 @@ var link = svg.selectAll(".link"),
 
 
 function hard_link(link) {
-    if (link == "http://library.temple.edu/model#Space" || link == "http://library.temple.edu/model#Group" || link == "http://library.temple.edu/model#Person") {
+    if (link == "http://library.temple.edu/tul" || link == "http://library.temple.edu/model#Space" || link == "http://library.temple.edu/model#Group" || link == "http://library.temple.edu/model#Person") {
         return true;
     }
     return false;

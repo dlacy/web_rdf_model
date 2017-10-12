@@ -4,12 +4,14 @@ import pprint
 
 pp = pprint.PrettyPrinter(indent=4)
 
-url = 'http://localhost/blazegraph/sparql'
+url = 'http://45.33.93.64//blazegraph/sparql'
 head = {"Accept":"application/json", "Content-type": "application/sparql-query"}
 
 unique_nodes = {}
 nodes = []
 links = []
+
+unique_nodes["http://library.temple.edu/tul"] = {"uri": "http://library.temple.edu/tul", "label": "Temple University Libraries", "type": "http://library.temple.edu/model#inSystem"}
 
 groups = {"http://library.temple.edu/model#Building": {"id": 1, "img": "http://localhost/web_rdf/assets/icons/building.png"},
           "http://library.temple.edu/model#Space": {"id": 2, "img": "http://localhost/web_rdf/assets/icons/space.png"},
@@ -21,27 +23,46 @@ groups = {"http://library.temple.edu/model#Building": {"id": 1, "img": "http://l
           "http://library.temple.edu/model#Buildings": {"id": 8, "img": "http://localhost/web_rdf/assets/icons/buildings.png"},
           "http://library.temple.edu/model#Spaces": {"id": 9, "img": "http://localhost/web_rdf/assets/icons/spaces.png"},
           "http://library.temple.edu/model#Groups": {"id": 10, "img": "http://localhost/web_rdf/assets/icons/groups.png"},
-          "http://library.temple.edu/model#Persons": {"id": 4, "img": "http://localhost/web_rdf/assets/icons/persons.png"}
+          "http://library.temple.edu/model#Persons": {"id": 11, "img": "http://localhost/web_rdf/assets/icons/persons.png"},
+          "http://library.temple.edu/model#inSystem": {"id": 12, "img": "http://localhost/web_rdf/assets/icons/tul.png"}
           }
 
-#Classes belonging to a building:
-
-q = "select DISTINCT ?s_type ?building where\
+# Buildings belonging to TUL
+q = "select DISTINCT ?building where\
 {\
-?s <http://library.temple.edu/model#inBuilding> ?building .\
-  ?s <http://www.w3.org/2000/01/rdf-schema#type> ?s_type\
-}"
+?building <http://library.temple.edu/model#inSystem> <http://library.temple.edu/tul> .\
+}\
+"
 
 res = requests.post(url, data=q,  headers=head)
 raw = json.loads(res.text)
 entities = raw["results"]["bindings"]
 
 for binding in entities:
-    s_type = binding["s_type"]["value"]
     building = binding["building"]["value"]
-    unique_nodes[s_type] = {"uri": s_type, "label": s_type, "type": s_type + "s"}
     unique_nodes[building] = {"uri": building, "label": building, "type": "http://library.temple.edu/model#inBuilding"}
-    links.append({"source": building, "target": s_type, "value": 1})
+    links.append({"source": building, "target": "http://library.temple.edu/tul", "value": 1})
+
+    #Classes belonging to a building:
+
+    q = "select DISTINCT ?s_type where\
+    {\
+    ?s <http://library.temple.edu/model#inBuilding> <" + building + "> . \
+      ?s <http://www.w3.org/2000/01/rdf-schema#type> ?s_type\
+    }"
+
+    res = requests.post(url, data=q,  headers=head)
+    raw = json.loads(res.text)
+    entities = raw["results"]["bindings"]
+
+    for binding in entities:
+        s_type = binding["s_type"]["value"]
+        #building = binding["building"]["value"]
+        unique_nodes[s_type] = {"uri": s_type, "label": s_type, "type": s_type + "s"}
+        #unique_nodes[building] = {"uri": building, "label": building, "type": "http://library.temple.edu/model#inBuilding"}
+        links.append({"source": building, "target": s_type, "value": 1})
+
+# Get the rest
 
 q = "select ?s ?s_label ?s_type ?p ?o ?o_label ?o_type where \
 {\

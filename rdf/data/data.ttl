@@ -10,11 +10,23 @@
 @prefix rooms: <http://vocab.deri.ie/rooms#> .
 @prefix tul: <http://library.temple.edu/model#> .
 
+<http://library.temple.edu/tul>
+    <http://www.w3.org/2000/01/rdf-schema#type> <http://www.w3.org/2000/01/rdf-schema#Class> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Temple University Library System"@en .
+
+<http://library.temple.edu/building/hsl>
+    <http://www.w3.org/2000/01/rdf-schema#type> <http://library.temple.edu/model#Building> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Health Sciences Libraries"@en ;
+    <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "40.006878" ;
+    <http://www.w3.org/2003/01/geo/wgs84_pos#long> "-75.152225" ;
+    <http://library.temple.edu/model#inSystem> <http://library.temple.edu/tul> .
+
 <http://library.temple.edu/building/paley>
     <http://www.w3.org/2000/01/rdf-schema#type> <http://library.temple.edu/model#Building> ;
     <http://www.w3.org/2000/01/rdf-schema#label> "Samuel Paley Library"@en ;
     <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "39.980939" ;
-    <http://www.w3.org/2003/01/geo/wgs84_pos#long> "-75.154437" .
+    <http://www.w3.org/2003/01/geo/wgs84_pos#long> "-75.154437" ;
+    <http://library.temple.edu/model#inSystem> <http://library.temple.edu/tul> .
 
 <http://library.temple.edu/space/dsc>
     <http://www.w3.org/2000/01/rdf-schema#type> <http://library.temple.edu/model#Space> ;
