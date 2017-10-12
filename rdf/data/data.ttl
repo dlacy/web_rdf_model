@@ -1,0 +1,71 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdakit: <http://metadataregistry.org/uri/profile/rdakit/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://metadataregistry.org/uri/profile/regap/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wgs84: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix rooms: <http://vocab.deri.ie/rooms#> .
+@prefix tul: <http://library.temple.edu/model#> .
+
+<http://library.temple.edu/building/paley>
+    <http://www.w3.org/2000/01/rdf-schema#type> <http://library.temple.edu/model#Building> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Samuel Paley Library"@en ;
+    <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "39.980939" ;
+    <http://www.w3.org/2003/01/geo/wgs84_pos#long> "-75.154437" .
+
+<http://library.temple.edu/space/dsc>
+    <http://www.w3.org/2000/01/rdf-schema#type> <http://library.temple.edu/model#Space> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Digital Scholarship Center"@en ;
+    <http://vocab.deri.ie/rooms#Floor> "0"^^xsd:integer ;
+    <http://library.temple.edu/model#inBuilding> <http://library.temple.edu/building/paley> .
+
+<http://library.temple.edu/group/dsc>
+    <http://www.w3.org/2000/01/rdf-schema#type> <http://library.temple.edu/model#Group> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Team: Digital Scholarship Development"@en ;
+    <http://library.temple.edu/model#inBuilding> <http://library.temple.edu/building/paley> .
+
+<http://library.temple.edu/person/matt_shoemaker>
+    <http://www.w3.org/2000/01/rdf-schema#type> <http://library.temple.edu/model#Person> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Shoemaker, Matt"@en ;
+    <http://library.temple.edu/model#inGroup> <http://library.temple.edu/group/dsc> ;
+    <http://library.temple.edu/model#inBuilding> <http://library.temple.edu/building/paley> .
+
+<http://library.temple.edu/person/jennifer_grayburn>
+    <http://www.w3.org/2000/01/rdf-schema#type> <http://library.temple.edu/model#Person> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Grayburn, Jennifer"@en ;
+    <http://library.temple.edu/model#inGroup> <http://library.temple.edu/group/dsc> ;
+    <http://library.temple.edu/model#inBuilding> <http://library.temple.edu/building/paley> .
+
+<http://library.temple.edu/space/scrc>
+    <http://www.w3.org/2000/01/rdf-schema#type> <http://library.temple.edu/model#Space> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Special Collections Resource Center"@en ;
+    <http://vocab.deri.ie/rooms#Floor> "0"^^xsd:integer ;
+    <http://library.temple.edu/model#inBuilding> <http://library.temple.edu/building/paley> .
+
+<http://library.temple.edu/group/scrc>
+    <http://www.w3.org/2000/01/rdf-schema#type> <http://library.temple.edu/model#Group> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Department: Special Collections Resource Center"@en ;
+    <http://library.temple.edu/model#inSpace> <http://library.temple.edu/space/scrc> ;
+    <http://library.temple.edu/model#inBuilding> <http://library.temple.edu/building/paley> .
+
+<http://library.temple.edu/person/margery_sly>
+    <http://www.w3.org/2000/01/rdf-schema#type> <http://library.temple.edu/model#Person> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Sly, Margery"@en ;
+    <http://library.temple.edu/model#inGroup> <http://library.temple.edu/group/scrc> ;
+    <http://library.temple.edu/model#inBuilding> <http://library.temple.edu/building/paley> .
+
+<http://library.temple.edu/person/katy_rawdon>
+    <http://www.w3.org/2000/01/rdf-schema#type> <http://library.temple.edu/model#Person> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Rawdon, Katy"@en ;
+    <http://library.temple.edu/model#inGroup> <http://library.temple.edu/group/scrc> ;
+    <http://library.temple.edu/model#inBuilding> <http://library.temple.edu/building/paley> .
+
+<http://library.temple.edu/space/mediaservices>
+    <http://www.w3.org/2000/01/rdf-schema#type> <http://library.temple.edu/model#Space> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Media Services"@en ;
+    <http://vocab.deri.ie/rooms#Floor> "0"^^xsd:integer ;
+    <http://library.temple.edu/model#inBuilding> <http://library.temple.edu/building/paley> .
+
