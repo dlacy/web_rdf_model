@@ -81,3 +81,17 @@
     <http://vocab.deri.ie/rooms#Floor> "0"^^xsd:integer ;
     <http://library.temple.edu/model#inBuilding> <http://library.temple.edu/building/paley> .
 
+<http://library.temple.edu/person/jenny_pierce>
+    <http://www.w3.org/2000/01/rdf-schema#type> <http://library.temple.edu/model#Person> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Pierce, Jenny"@en ;
+    <http://library.temple.edu/model#inBuilding> <http://library.temple.edu/building/hsl> .
+
+<http://library.temple.edu/person/lauri_fennell>
+    <http://www.w3.org/2000/01/rdf-schema#type> <http://library.temple.edu/model#Person> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Fennell, Lauri"@en ;
+    <http://library.temple.edu/model#inBuilding> <http://library.temple.edu/building/hsl> .
+
+<http://library.temple.edu/person/royce_sargeant>
+    <http://www.w3.org/2000/01/rdf-schema#type> <http://library.temple.edu/model#Person> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Sargeant, Royce"@en ;
+    <http://library.temple.edu/model#inBuilding> <http://library.temple.edu/building/hsl> .

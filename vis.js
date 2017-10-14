@@ -1,95 +1,126 @@
+
+//	graph data store
+var graph;
+
+//	state variable for current link set
+var firstLinks = false;
+
 var svg = d3.select("svg"),
     width = +svg.attr("width"),
     height = +svg.attr("height");
+
+//	d3 color scheme
+var color = d3.scaleOrdinal(d3.schemeCategory10);
+
+// elements for data join
+var link = svg.append("g").selectAll(".link"),
+	node = svg.append("g").selectAll(".node"),
+    image = svg.append("g").selectAll(".icon");
+
+//	simulation initialization
+// This configuration is also pretty good
+/*
+var simulation = d3.forceSimulation()
+	.force("link", d3.forceLink()
+	    .id(function(d) { return d.id; }))
+	.force("charge", d3.forceManyBody()
+	    .strength(function(d) { return -500;}))
+	.force("center", d3.forceCenter(width / 2, height / 2));
+*/
 
 var simulation = d3.forceSimulation()
     .force("charge", d3.forceManyBody())
     .force("link", d3.forceLink().id(function(d) { return d.id; }).distance(20).strength(
     function(d){
-        console.log(d);
-        console.log(hard_link(d.target.id));
-        console.log(d.id);
-        if (hard_link(d.target.id)) {
+        if ( d.link == "hard" ) {
             return .5;
         } else {
             return 0;
         }
     }
     ))
-    .force("x", d3.forceX(width / 2))
-    .force("y", d3.forceY(height / 2))
+    .force("center", d3.forceCenter(width / 2, height / 2))
     .on("tick", ticked);
 
-var link = svg.selectAll(".link"),
-    node = svg.selectAll(".node"),
-    image = svg.selectAll(".icon");
 
+//	button event handling
+d3.select("#switch-btn").on("click", function() {
+	firstLinks = !firstLinks;
+	update();
+});
 
-function hard_link(link) {
-    if (link == "http://library.temple.edu/tul" || link == "http://library.temple.edu/model#Space" || link == "http://library.temple.edu/model#Group" || link == "http://library.temple.edu/model#Person") {
-        return true;
-    }
-    return false;
-}
+//	follow v4 general update pattern
+function update() {
+  	// Update link set based on current state
+	// DATA JOIN
 
-function drawGraph() {
+    link = link.data(firstLinks ? graph.links.filter(function(d) { return d.link == "hard" }) : graph.links);
 
-    simulation.nodes(data.nodes);
-    simulation.force("link").links(data.links);
+	// EXIT
+  	// Remove old links
+	link.exit().remove();
 
-    link = link
-    .data(data.links)
-    .enter().append("line")
-        .attr("class", "link")
-        .style("stroke-dasharray", function(d) {
-            if (hard_link(d.target.id)) {
+	// DATA JOIN
+	node = node.data(graph.nodes);
+
+	// EXIT
+	node.exit().remove();
+
+    simulation.force("charge", d3.forceManyBody())
+        .nodes(graph.nodes)
+        .on("tick", ticked);
+
+  	simulation.force("link")
+  		.links(firstLinks ? graph.links.filter(function(d) { return d.link == "hard" }) : graph.links);
+
+	// ENTER
+  	// Create new links as needed.
+
+	link = link.enter().append("line")
+		.attr("class", "link")
+		.style("stroke-dasharray", function(d) {
+
+            if (d.link == "hard") {
                 return ("0, 0");
             } else {
                 return ("3, 3");
             }
         })
         .style("stroke-width", function(d) {
-            if (hard_link(d.target.id)) {
+            if (d.link == "hard") {
                 return 1;
             } else {
-                return .25;
+                return .1;
             }
         })
-        ;
+		.merge(link);
 
-    image = image
-    .data(data.nodes)
-    .enter().append("svg:image")
-        .attr("class", "icon")
-        .attr("xlink:href", function(d) { return d.img; })
-        .attr("width", "20")
+
+
+	// ENTER
+	node = node.enter().append("svg:image")
+		.attr("class", "icon")
+		.attr("xlink:href", function(d) { return d.img; })
+		.attr("width", "20")
         .attr("height", "20")
-    .call(d3.drag()
-                .on("start", dragstarted)
-                .on("drag", dragged)
-                .on("end", dragended));
-    image.append("title")
-        .text(function(d) { return d.id; });
-
-    /*
-    node = node
-    .data(data.nodes)
-    .enter().append("circle")
-        .attr("class", "node")
-        .attr("r", 2)
-        .style("fill", function(d) { return d.id; })
-    .call(d3.drag()
-                .on("start", dragstarted)
-                .on("drag", dragged)
-                .on("end", dragended));
-
+		.call(d3.drag()
+          .on("start", dragstarted)
+          .on("drag", dragged)
+          .on("end", dragended)
+        )
+		.merge(node);
     node.append("title")
         .text(function(d) { return d.id; });
-    */
+
+
+
+// TODO: This tightens up the bundle.
+/*
+        .force("x", d3.forceX(width / 2))
+        .force("y", d3.forceY(height / 2))
+*/
+  	simulation.alphaTarget(0.3).restart();
 }
-
-
-drawGraph();
 
 
 function ticked() {
@@ -97,13 +128,14 @@ function ticked() {
       .attr("y1", function(d) { return d.source.y; })
       .attr("x2", function(d) { return d.target.x; })
       .attr("y2", function(d) { return d.target.y; });
-  /*
+/*
   node.attr("cx", function(d) { return d.x; })
       .attr("cy", function(d) { return d.y; });
-  */
-  image.attr("x", function(d) { return d.x - 10; })
-      .attr("y", function(d) { return d.y - 10; });
+*/
+  node.attr("x", function(d) { return d.x - 10; })
+       .attr("y", function(d) { return d.y - 10; });
 }
+
 
 function dragstarted(d) {
     if (!d3.event.active) simulation.alphaTarget(0.3).restart();
@@ -121,3 +153,12 @@ function dragended(d) {
     d.fx = null;
     d.fy = null;
 }
+
+//	load and save data
+d3.json("node_link_model.json", function(err, g) {
+	if (err) throw err;
+
+	graph = g;
+
+	update();
+});
