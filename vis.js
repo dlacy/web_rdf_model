@@ -9,13 +9,23 @@ var svg = d3.select("svg"),
     width = +svg.attr("width"),
     height = +svg.attr("height");
 
+//add encompassing group for the zoom
+var g = svg.append("g")
+    .attr("class", "everything");
+
+//add zoom capabilities
+var zoom_handler = d3.zoom()
+    .on("zoom", zoom_actions);
+
+zoom_handler(svg);
+
 //	d3 color scheme
 var color = d3.scaleOrdinal(d3.schemeCategory10);
 
 // elements for data join
-var link = svg.append("g").selectAll(".link"),
-	node = svg.append("g").selectAll(".node"),
-    image = svg.append("g").selectAll(".icon");
+var link = g.append("g").selectAll(".link"),
+	node = g.append("g").selectAll(".node"),
+    image = g.append("g").selectAll(".icon");
 
 //	simulation initialization
 // This configuration is also pretty good
@@ -41,6 +51,7 @@ var simulation = d3.forceSimulation()
     ))
     .force("center", d3.forceCenter(width / 2, height / 2))
     .on("tick", ticked);
+
 
 
 //	button event handling
@@ -123,6 +134,7 @@ function update() {
 }
 
 
+
 function ticked() {
   link.attr("x1", function(d) { return d.source.x; })
       .attr("y1", function(d) { return d.source.y; })
@@ -136,6 +148,10 @@ function ticked() {
        .attr("y", function(d) { return d.y - 10; });
 }
 
+//Zoom functions
+function zoom_actions(){
+    g.attr("transform", d3.event.transform)
+}
 
 function dragstarted(d) {
     if (!d3.event.active) simulation.alphaTarget(0.3).restart();
