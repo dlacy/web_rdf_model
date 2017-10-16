@@ -51,6 +51,16 @@
             "img": "http://localhost/web_rdf/assets/icons/group.png"
         },
         {
+            "id": "http://library.temple.edu/space/scrc",
+            "group": 2,
+            "img": "http://localhost/web_rdf/assets/icons/space.png"
+        },
+        {
+            "id": "http://library.temple.edu/building/paley::http://library.temple.edu/model#Person",
+            "group": 11,
+            "img": "http://localhost/web_rdf/assets/icons/persons.png"
+        },
+        {
             "id": "http://library.temple.edu/person/jennifer_grayburn",
             "group": 4,
             "img": "http://localhost/web_rdf/assets/icons/person.png"
@@ -71,6 +81,11 @@
             "img": "http://localhost/web_rdf/assets/icons/person.png"
         },
         {
+            "id": "http://library.temple.edu/building/paley::http://library.temple.edu/model#Space",
+            "group": 9,
+            "img": "http://localhost/web_rdf/assets/icons/spaces.png"
+        },
+        {
             "id": "http://library.temple.edu/space/dsc",
             "group": 2,
             "img": "http://localhost/web_rdf/assets/icons/space.png"
@@ -79,21 +94,6 @@
             "id": "http://library.temple.edu/space/mediaservices",
             "group": 2,
             "img": "http://localhost/web_rdf/assets/icons/space.png"
-        },
-        {
-            "id": "http://library.temple.edu/space/scrc",
-            "group": 2,
-            "img": "http://localhost/web_rdf/assets/icons/space.png"
-        },
-        {
-            "id": "http://library.temple.edu/building/paley::http://library.temple.edu/model#Person",
-            "group": 11,
-            "img": "http://localhost/web_rdf/assets/icons/persons.png"
-        },
-        {
-            "id": "http://library.temple.edu/building/paley::http://library.temple.edu/model#Space",
-            "group": 9,
-            "img": "http://localhost/web_rdf/assets/icons/spaces.png"
         }
     ],
     "links": [
@@ -152,96 +152,6 @@
             "link": "hard"
         },
         {
-            "source": "http://library.temple.edu/person/jennifer_grayburn",
-            "target": "http://library.temple.edu/building/paley::http://library.temple.edu/model#Person",
-            "value": 1,
-            "link": "hard"
-        },
-        {
-            "source": "http://library.temple.edu/person/katy_rawdon",
-            "target": "http://library.temple.edu/building/paley::http://library.temple.edu/model#Person",
-            "value": 1,
-            "link": "hard"
-        },
-        {
-            "source": "http://library.temple.edu/person/margery_sly",
-            "target": "http://library.temple.edu/building/paley::http://library.temple.edu/model#Person",
-            "value": 1,
-            "link": "hard"
-        },
-        {
-            "source": "http://library.temple.edu/person/matt_shoemaker",
-            "target": "http://library.temple.edu/building/paley::http://library.temple.edu/model#Person",
-            "value": 1,
-            "link": "hard"
-        },
-        {
-            "source": "http://library.temple.edu/space/dsc",
-            "target": "http://library.temple.edu/building/paley::http://library.temple.edu/model#Space",
-            "value": 1,
-            "link": "hard"
-        },
-        {
-            "source": "http://library.temple.edu/space/mediaservices",
-            "target": "http://library.temple.edu/building/paley::http://library.temple.edu/model#Space",
-            "value": 1,
-            "link": "hard"
-        },
-        {
-            "source": "http://library.temple.edu/space/scrc",
-            "target": "http://library.temple.edu/building/paley::http://library.temple.edu/model#Space",
-            "value": 1,
-            "link": "hard"
-        },
-        {
-            "source": "http://library.temple.edu/person/jennifer_grayburn",
-            "target": "http://library.temple.edu/group/dsc",
-            "value": 1,
-            "link": "soft"
-        },
-        {
-            "source": "http://library.temple.edu/person/jennifer_grayburn",
-            "target": "http://library.temple.edu/building/paley::http://library.temple.edu/model#Person",
-            "value": 1,
-            "link": "hard"
-        },
-        {
-            "source": "http://library.temple.edu/person/matt_shoemaker",
-            "target": "http://library.temple.edu/group/dsc",
-            "value": 1,
-            "link": "soft"
-        },
-        {
-            "source": "http://library.temple.edu/person/matt_shoemaker",
-            "target": "http://library.temple.edu/building/paley::http://library.temple.edu/model#Person",
-            "value": 1,
-            "link": "hard"
-        },
-        {
-            "source": "http://library.temple.edu/person/katy_rawdon",
-            "target": "http://library.temple.edu/group/scrc",
-            "value": 1,
-            "link": "soft"
-        },
-        {
-            "source": "http://library.temple.edu/person/katy_rawdon",
-            "target": "http://library.temple.edu/building/paley::http://library.temple.edu/model#Person",
-            "value": 1,
-            "link": "hard"
-        },
-        {
-            "source": "http://library.temple.edu/person/margery_sly",
-            "target": "http://library.temple.edu/group/scrc",
-            "value": 1,
-            "link": "soft"
-        },
-        {
-            "source": "http://library.temple.edu/person/margery_sly",
-            "target": "http://library.temple.edu/building/paley::http://library.temple.edu/model#Person",
-            "value": 1,
-            "link": "hard"
-        },
-        {
             "source": "http://library.temple.edu/group/scrc",
             "target": "http://library.temple.edu/space/scrc",
             "value": 1,
@@ -260,18 +170,6 @@
             "link": "hard"
         },
         {
-            "source": "http://library.temple.edu/group/dsc",
-            "target": "http://library.temple.edu/building/paley::http://library.temple.edu/model#Group",
-            "value": 1,
-            "link": "hard"
-        },
-        {
-            "source": "http://library.temple.edu/group/scrc",
-            "target": "http://library.temple.edu/building/paley::http://library.temple.edu/model#Group",
-            "value": 1,
-            "link": "hard"
-        },
-        {
             "source": "http://library.temple.edu/person/jennifer_grayburn",
             "target": "http://library.temple.edu/building/paley::http://library.temple.edu/model#Person",
             "value": 1,
@@ -292,24 +190,6 @@
         {
             "source": "http://library.temple.edu/person/matt_shoemaker",
             "target": "http://library.temple.edu/building/paley::http://library.temple.edu/model#Person",
-            "value": 1,
-            "link": "hard"
-        },
-        {
-            "source": "http://library.temple.edu/space/dsc",
-            "target": "http://library.temple.edu/building/paley::http://library.temple.edu/model#Space",
-            "value": 1,
-            "link": "hard"
-        },
-        {
-            "source": "http://library.temple.edu/space/mediaservices",
-            "target": "http://library.temple.edu/building/paley::http://library.temple.edu/model#Space",
-            "value": 1,
-            "link": "hard"
-        },
-        {
-            "source": "http://library.temple.edu/space/scrc",
-            "target": "http://library.temple.edu/building/paley::http://library.temple.edu/model#Space",
             "value": 1,
             "link": "hard"
         },
@@ -358,18 +238,6 @@
         {
             "source": "http://library.temple.edu/person/margery_sly",
             "target": "http://library.temple.edu/building/paley::http://library.temple.edu/model#Person",
-            "value": 1,
-            "link": "hard"
-        },
-        {
-            "source": "http://library.temple.edu/group/scrc",
-            "target": "http://library.temple.edu/space/scrc",
-            "value": 1,
-            "link": "soft"
-        },
-        {
-            "source": "http://library.temple.edu/group/scrc",
-            "target": "http://library.temple.edu/building/paley::http://library.temple.edu/model#Group",
             "value": 1,
             "link": "hard"
         },
@@ -380,42 +248,6 @@
             "link": "hard"
         },
         {
-            "source": "http://library.temple.edu/group/dsc",
-            "target": "http://library.temple.edu/building/paley::http://library.temple.edu/model#Group",
-            "value": 1,
-            "link": "hard"
-        },
-        {
-            "source": "http://library.temple.edu/group/scrc",
-            "target": "http://library.temple.edu/building/paley::http://library.temple.edu/model#Group",
-            "value": 1,
-            "link": "hard"
-        },
-        {
-            "source": "http://library.temple.edu/person/jennifer_grayburn",
-            "target": "http://library.temple.edu/building/paley::http://library.temple.edu/model#Person",
-            "value": 1,
-            "link": "hard"
-        },
-        {
-            "source": "http://library.temple.edu/person/katy_rawdon",
-            "target": "http://library.temple.edu/building/paley::http://library.temple.edu/model#Person",
-            "value": 1,
-            "link": "hard"
-        },
-        {
-            "source": "http://library.temple.edu/person/margery_sly",
-            "target": "http://library.temple.edu/building/paley::http://library.temple.edu/model#Person",
-            "value": 1,
-            "link": "hard"
-        },
-        {
-            "source": "http://library.temple.edu/person/matt_shoemaker",
-            "target": "http://library.temple.edu/building/paley::http://library.temple.edu/model#Person",
-            "value": 1,
-            "link": "hard"
-        },
-        {
             "source": "http://library.temple.edu/space/dsc",
             "target": "http://library.temple.edu/building/paley::http://library.temple.edu/model#Space",
             "value": 1,
@@ -430,66 +262,6 @@
         {
             "source": "http://library.temple.edu/space/scrc",
             "target": "http://library.temple.edu/building/paley::http://library.temple.edu/model#Space",
-            "value": 1,
-            "link": "hard"
-        },
-        {
-            "source": "http://library.temple.edu/person/jennifer_grayburn",
-            "target": "http://library.temple.edu/group/dsc",
-            "value": 1,
-            "link": "soft"
-        },
-        {
-            "source": "http://library.temple.edu/person/jennifer_grayburn",
-            "target": "http://library.temple.edu/building/paley::http://library.temple.edu/model#Person",
-            "value": 1,
-            "link": "hard"
-        },
-        {
-            "source": "http://library.temple.edu/person/matt_shoemaker",
-            "target": "http://library.temple.edu/group/dsc",
-            "value": 1,
-            "link": "soft"
-        },
-        {
-            "source": "http://library.temple.edu/person/matt_shoemaker",
-            "target": "http://library.temple.edu/building/paley::http://library.temple.edu/model#Person",
-            "value": 1,
-            "link": "hard"
-        },
-        {
-            "source": "http://library.temple.edu/person/katy_rawdon",
-            "target": "http://library.temple.edu/group/scrc",
-            "value": 1,
-            "link": "soft"
-        },
-        {
-            "source": "http://library.temple.edu/person/katy_rawdon",
-            "target": "http://library.temple.edu/building/paley::http://library.temple.edu/model#Person",
-            "value": 1,
-            "link": "hard"
-        },
-        {
-            "source": "http://library.temple.edu/person/margery_sly",
-            "target": "http://library.temple.edu/group/scrc",
-            "value": 1,
-            "link": "soft"
-        },
-        {
-            "source": "http://library.temple.edu/person/margery_sly",
-            "target": "http://library.temple.edu/building/paley::http://library.temple.edu/model#Person",
-            "value": 1,
-            "link": "hard"
-        },
-        {
-            "source": "http://library.temple.edu/group/scrc",
-            "target": "http://library.temple.edu/space/scrc",
-            "value": 1,
-            "link": "soft"
-        },
-        {
-            "source": "http://library.temple.edu/group/scrc",
-            "target": "http://library.temple.edu/building/paley::http://library.temple.edu/model#Group",
             "value": 1,
             "link": "hard"
         }

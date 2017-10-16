@@ -69,7 +69,7 @@ for binding in entities:
         q = "select ?s ?s_label ?s_type ?p ?o ?o_label ?o_type where \
         {\
         ?s <http://library.temple.edu/model#inBuilding> <" + building + "> .\
-        ?s <http://www.w3.org/2000/01/rdf-schema#type> ?s_type .\
+        ?s <http://www.w3.org/2000/01/rdf-schema#type> <" + s_type + ">.\
         ?s <http://www.w3.org/2000/01/rdf-schema#label> ?s_label .\
         ?s ?p ?o .\
         ?o <http://www.w3.org/2000/01/rdf-schema#type> ?o_type .\
@@ -88,17 +88,17 @@ for binding in entities:
         for binding in entities:
             subject = binding["s"]["value"]
             subject_label = binding["s_label"]["value"]
-            s_type2 = binding["s_type"]["value"]
+            #s_type2 = binding["s_type"]["value"]
             predicate = binding["p"]["value"]
             object = binding["o"]["value"]
             object_label = binding["o_label"]["value"]
             o_type = binding["o_type"]["value"]
 
-            unique_nodes[subject] = {"uri": subject, "label": subject_label, "type": s_type2}
+            unique_nodes[subject] = {"uri": subject, "label": subject_label, "type": s_type}
             unique_nodes[object] = {"uri": object, "label": object_label, "type": o_type}
             if predicate != "http://library.temple.edu/model#inBuilding":
                 links.append({"source": subject, "target": object, "value": 1, "link": "soft"})
-            links.append({"source": subject, "target": building + "::" + s_type2, "value": 1, "link": "hard"})
+            links.append({"source": subject, "target": building + "::" + s_type, "value": 1, "link": "hard"})
 
             #links.append({"source": subject, "target": predicate, "value": 1})
             #links.append({"source": predicate, "target": object, "value": 1})
