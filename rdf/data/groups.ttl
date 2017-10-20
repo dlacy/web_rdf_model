@@ -1,0 +1,22 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdakit: <http://metadataregistry.org/uri/profile/rdakit/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://metadataregistry.org/uri/profile/regap/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wgs84: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix rooms: <http://vocab.deri.ie/rooms#> .
+@prefix tul: <http://library.temple.edu/model#> .
+
+<http://library.temple.edu/group/dsc>
+    <http://www.w3.org/2000/01/rdf-schema#type> <http://library.temple.edu/model#Group> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Team: Digital Scholarship Development"@en ;
+    <http://library.temple.edu/model#inBuilding> <http://library.temple.edu/building/paley> .
+
+<http://library.temple.edu/group/scrc>
+    <http://www.w3.org/2000/01/rdf-schema#type> <http://library.temple.edu/model#Group> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Department: Special Collections Resource Center"@en ;
+    <http://library.temple.edu/model#inSpace> <http://library.temple.edu/space/scrc> ;
+    <http://library.temple.edu/model#inBuilding> <http://library.temple.edu/building/paley> .

@@ -156,6 +156,7 @@ function update() {
             */
         })
         .on("mouseout", function() {
+
             d3.selectAll(".circ").classed("hover", false)
                 .transition()
                     .attr("r", "10");
@@ -217,6 +218,7 @@ function dragended(d) {
     d.fy = null;
 }
 
+
 //	load and save data
 d3.json("node_link_model.json", function(err, g) {
 	if (err) throw err;
@@ -224,4 +226,5 @@ d3.json("node_link_model.json", function(err, g) {
 	graph = g;
 
 	update();
+
 });

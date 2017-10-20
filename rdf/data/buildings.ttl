@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdakit: <http://metadataregistry.org/uri/profile/rdakit/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://metadataregistry.org/uri/profile/regap/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wgs84: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix rooms: <http://vocab.deri.ie/rooms#> .
+@prefix tul: <http://library.temple.edu/model#> .
+
+<http://library.temple.edu/tul>
+    <http://www.w3.org/2000/01/rdf-schema#type> <http://www.w3.org/2000/01/rdf-schema#Class> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Temple University Library System"@en .
+
+<http://library.temple.edu/building/hsl>
+    <http://www.w3.org/2000/01/rdf-schema#type> <http://library.temple.edu/model#Building> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Health Sciences Libraries"@en ;
+    <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "40.006878" ;
+    <http://www.w3.org/2003/01/geo/wgs84_pos#long> "-75.152225" ;
+    <http://library.temple.edu/model#inSystem> <http://library.temple.edu/tul> .
+
+<http://library.temple.edu/building/paley>
+    <http://www.w3.org/2000/01/rdf-schema#type> <http://library.temple.edu/model#Building> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Samuel Paley Library"@en ;
+    <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "39.980939" ;
+    <http://www.w3.org/2003/01/geo/wgs84_pos#long> "-75.154437" ;
+    <http://library.temple.edu/model#inSystem> <http://library.temple.edu/tul> .

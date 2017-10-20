@@ -31,6 +31,66 @@
             "img": "http://localhost/web_rdf/assets/icons/person.png"
         },
         {
+            "id": "http://library.temple.edu/building/hsl::http://library.temple.edu/model#Service",
+            "group": 14,
+            "img": "http://localhost/web_rdf/assets/icons/services.png"
+        },
+        {
+            "id": "http://library.temple.edu/service/hsl_consult",
+            "group": 13,
+            "img": "http://localhost/web_rdf/assets/icons/service.png"
+        },
+        {
+            "id": "http://library.temple.edu/service/hsl_ill",
+            "group": 13,
+            "img": "http://localhost/web_rdf/assets/icons/service.png"
+        },
+        {
+            "id": "http://library.temple.edu/service/hsl_instruction",
+            "group": 13,
+            "img": "http://localhost/web_rdf/assets/icons/service.png"
+        },
+        {
+            "id": "http://library.temple.edu/service/hsl_photocopy",
+            "group": 13,
+            "img": "http://localhost/web_rdf/assets/icons/service.png"
+        },
+        {
+            "id": "http://library.temple.edu/service/hsl_printing",
+            "group": 13,
+            "img": "http://localhost/web_rdf/assets/icons/service.png"
+        },
+        {
+            "id": "http://library.temple.edu/service/hsl_purchase",
+            "group": 13,
+            "img": "http://localhost/web_rdf/assets/icons/service.png"
+        },
+        {
+            "id": "http://library.temple.edu/service/hsl_reference",
+            "group": 13,
+            "img": "http://localhost/web_rdf/assets/icons/service.png"
+        },
+        {
+            "id": "http://library.temple.edu/service/hsl_reserves",
+            "group": 13,
+            "img": "http://localhost/web_rdf/assets/icons/service.png"
+        },
+        {
+            "id": "http://library.temple.edu/service/hsl_suggest",
+            "group": 13,
+            "img": "http://localhost/web_rdf/assets/icons/service.png"
+        },
+        {
+            "id": "http://library.temple.edu/service/hsl_tutorials",
+            "group": 13,
+            "img": "http://localhost/web_rdf/assets/icons/service.png"
+        },
+        {
+            "id": "http://library.temple.edu/service/hsl_workshops",
+            "group": 13,
+            "img": "http://localhost/web_rdf/assets/icons/service.png"
+        },
+        {
             "id": "http://library.temple.edu/building/paley",
             "group": 1,
             "img": "http://localhost/web_rdf/assets/icons/building.png"
@@ -124,6 +184,78 @@
         {
             "source": "http://library.temple.edu/person/royce_sargeant",
             "target": "http://library.temple.edu/building/hsl::http://library.temple.edu/model#Person",
+            "value": 1,
+            "link": "hard"
+        },
+        {
+            "source": "http://library.temple.edu/building/hsl",
+            "target": "http://library.temple.edu/building/hsl::http://library.temple.edu/model#Service",
+            "value": 1,
+            "link": "hard"
+        },
+        {
+            "source": "http://library.temple.edu/service/hsl_consult",
+            "target": "http://library.temple.edu/building/hsl::http://library.temple.edu/model#Service",
+            "value": 1,
+            "link": "hard"
+        },
+        {
+            "source": "http://library.temple.edu/service/hsl_ill",
+            "target": "http://library.temple.edu/building/hsl::http://library.temple.edu/model#Service",
+            "value": 1,
+            "link": "hard"
+        },
+        {
+            "source": "http://library.temple.edu/service/hsl_instruction",
+            "target": "http://library.temple.edu/building/hsl::http://library.temple.edu/model#Service",
+            "value": 1,
+            "link": "hard"
+        },
+        {
+            "source": "http://library.temple.edu/service/hsl_photocopy",
+            "target": "http://library.temple.edu/building/hsl::http://library.temple.edu/model#Service",
+            "value": 1,
+            "link": "hard"
+        },
+        {
+            "source": "http://library.temple.edu/service/hsl_printing",
+            "target": "http://library.temple.edu/building/hsl::http://library.temple.edu/model#Service",
+            "value": 1,
+            "link": "hard"
+        },
+        {
+            "source": "http://library.temple.edu/service/hsl_purchase",
+            "target": "http://library.temple.edu/building/hsl::http://library.temple.edu/model#Service",
+            "value": 1,
+            "link": "hard"
+        },
+        {
+            "source": "http://library.temple.edu/service/hsl_reference",
+            "target": "http://library.temple.edu/building/hsl::http://library.temple.edu/model#Service",
+            "value": 1,
+            "link": "hard"
+        },
+        {
+            "source": "http://library.temple.edu/service/hsl_reserves",
+            "target": "http://library.temple.edu/building/hsl::http://library.temple.edu/model#Service",
+            "value": 1,
+            "link": "hard"
+        },
+        {
+            "source": "http://library.temple.edu/service/hsl_suggest",
+            "target": "http://library.temple.edu/building/hsl::http://library.temple.edu/model#Service",
+            "value": 1,
+            "link": "hard"
+        },
+        {
+            "source": "http://library.temple.edu/service/hsl_tutorials",
+            "target": "http://library.temple.edu/building/hsl::http://library.temple.edu/model#Service",
+            "value": 1,
+            "link": "hard"
+        },
+        {
+            "source": "http://library.temple.edu/service/hsl_workshops",
+            "target": "http://library.temple.edu/building/hsl::http://library.temple.edu/model#Service",
             "value": 1,
             "link": "hard"
         },
