@@ -27,6 +27,9 @@ var link = g.append("g").selectAll(".link"),
     icon = g.append("g").selectAll(".icon"),
     circ = g.append("g").selectAll(".circ");
 
+//
+var selectedNode;
+
 //	simulation initialization
 // This configuration is also pretty good
 /*
@@ -91,21 +94,24 @@ function update() {
 
 	link = link.enter().append("line")
 		.attr("class", "link")
-		.style("stroke-dasharray", function(d) {
-            if (d.link == "hard") {
+		.merge(link);
+
+    // force style update for cases there lines are reused in different links
+    d3.selectAll(".link").style("stroke-dasharray", function(d) {
+            if (d.link === "hard") {
                 return ("0, 0");
             } else {
                 return ("3, 3");
             }
         })
         .style("stroke-width", function(d) {
-            if (d.link == "hard") {
+            if (d.link === "hard") {
                 return 1;
             } else {
                 return .1;
             }
         })
-		.merge(link);
+
 
 	// Icon ENTER
 	icon = icon.enter().append("svg:image")
@@ -118,19 +124,42 @@ function update() {
         .text(function(d) { return d.id; });
 
     // Circ ENTER
-    circ = circ.enter().append("circle")
+    circ = circ.enter().append("g").append("circle")
 		.attr("class", "circ")
-		.style("fill-opacity", 0)
-		.style("stroke", "#000000")
-		.style("stroke-width", 0)
-		.attr("r", "15")
+		.attr("r", "10")
         .on("mouseover", function(d) {
-            console.log(d);
+
             d3.select(this)
-                .style('stroke-width', 2);
+                .transition()
+                    .attr("r", "15")
+                    .attr("class", "circ hover");
+
+            d3.select(this.parentNode).append("text")
+                .attr("class", "label")
+                .text(d.id)
+                .attr("x", d.x + 5)
+                .attr("y", d.y - 15);
+
+        })
+        .on("click", function(d) {
+            /*
+            d3.select(this)
+                .attr("class", "circ selected")
+            */
+            /*
+            d3.select(this.parentNode).append("text")
+                .style("color", "#FF0000")
+                .text(d.id)
+                .attr("font-family", "sans-serif")
+                .attr("font-size", "20px")
+                .attr("fill", "red");
+            */
         })
         .on("mouseout", function() {
-            d3.select(this).style('stroke-width', 0);
+            d3.selectAll(".circ").classed("hover", false)
+                .transition()
+                    .attr("r", "10");
+            d3.select(this.parentNode).selectAll(".label").remove();
         })
         .call(d3.drag()
             .on("start", dragstarted)
@@ -150,16 +179,20 @@ function update() {
 
 
 function ticked() {
-  link.attr("x1", function(d) { return d.source.x; })
-      .attr("y1", function(d) { return d.source.y; })
-      .attr("x2", function(d) { return d.target.x; })
-      .attr("y2", function(d) { return d.target.y; });
+    link.attr("x1", function(d) { return d.source.x; })
+        .attr("y1", function(d) { return d.source.y; })
+        .attr("x2", function(d) { return d.target.x; })
+        .attr("y2", function(d) { return d.target.y; });
 
-  circ.attr("cx", function(d) { return d.x; })
-      .attr("cy", function(d) { return d.y; });
+    circ.attr("cx", function(d) { return d.x; })
+        .attr("cy", function(d) { return d.y; });
 
-  icon.attr("x", function(d) { return d.x - 10; })
-       .attr("y", function(d) { return d.y - 10; });
+    circ.selectAll(".label")
+        .attr("x", function(d) { return d.x; })
+        .attr("y", function(d) { return d.y; });
+
+    icon.attr("x", function(d) { return d.x - 10; })
+        .attr("y", function(d) { return d.y - 10; });
 }
 
 //Zoom functions
