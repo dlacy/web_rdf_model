@@ -4,7 +4,7 @@ import pprint
 
 pp = pprint.PrettyPrinter(indent=4)
 
-url = 'http://localhost/blazegraph/sparql'
+url = 'http://45.33.93.64/blazegraph/sparql'
 head = {"Accept":"application/json", "Content-type": "application/sparql-query"}
 
 unique_nodes = {}
@@ -67,7 +67,7 @@ for binding in entities:
         links.append({"source": building, "target": building_plus_type, "value": 1, "link": "hard"})
 
         # Get the rest
-        # TODO: This is still generating a lot of duplicate relationship links
+        #
         q = "select ?s ?s_label ?s_type ?p ?o ?o_label ?o_type where \
         {\
         ?s <http://library.temple.edu/model#inBuilding> <" + building + "> .\
@@ -109,7 +109,7 @@ for binding in entities:
         #pp.pprint(links)
 
 for node in unique_nodes:
-    nodes.append({"id": unique_nodes[node]["uri"], "group": groups[unique_nodes[node]["type"]]["id"], "img": groups[unique_nodes[node]["type"]]["img"]})
+    nodes.append({"id": unique_nodes[node]["uri"], "group": groups[unique_nodes[node]["type"]]["id"], "img": groups[unique_nodes[node]["type"]]["img"], "type": unique_nodes[node]["type"], "label": unique_nodes[node]["label"]})
 
 #pp.pprint(nodes)
 
