@@ -7,18 +7,19 @@ var firstLinks = false;
 
 // rdf parser
 var parser = N3.Parser();
+var N3Util = N3.Util;
 
 // sparql query
-var getstmts = `
-                PREFIX tul: <http://library.temple.edu/model#>
-                PREFIX wgs84: <http://www.w3.org/2003/01/geo/wgs84_pos#>
-
-                CONSTRUCT { ?s ?p ?o }
-                where
-                {
-                ?s ?p ?o
+var getstmts = function(subject) {
+                console.log(subject);
+                return `
+                    CONSTRUCT { <${subject}> ?p ?o }
+                    where
+                    {
+                    <${subject}> ?p ?o
+                    }
+                    `
                 }
-                `
 
 var svg = d3.select("svg"),
     width = +svg.attr("width"),
@@ -172,16 +173,15 @@ function update() {
                     .style("font", "14px 'Helvetica Neue'")
                     .html(d.label + "<br/>" + d.id);
 
-            req = d3.request("http://45.33.93.64/blazegraph/sparql?GETSTMTS&s=<" + d.id + ">")
+            req = d3.request("http://45.33.93.64/blazegraph/sparql")
+                .header("Accept", "text/turtle")
+                .header("Content-Type", "application/sparql-query")
                 .response(function(xhr) {
                     return xhr.responseText;
                 })
-                .get(function(data) {
-                    prefixes = { tul: 'http://library.temple.edu/model#' };
+                .post(getstmts(d.id), function(data) {
                     parser.parse(data, function (error, triple, prefixes) {
                        if (triple) {
-                         console.log(triple);
-                         console.log(triple.subject, triple.predicate, triple.object, '.');
                         d3.selectAll(".info")
                             .append("foreignObject")
                                 .attr("class", "textbox")
@@ -192,16 +192,10 @@ function update() {
                                 .html(triple.predicate + " :: " + triple.object);
 
                        } else {
-                         console.log("# That's all, folks!", prefixes);
+                         console.log(prefixes);
                        }
                      });
-                    d3.selectAll(".info")
-                        .append("text")
-                            .attr("class", "textbox")
-                            .attr("width", 480)
-                            .attr("height", 500)
-                            .style("font", "10px 'Helvetica Neue'")
-                            .text(data);
+
                 });
 //.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
 
