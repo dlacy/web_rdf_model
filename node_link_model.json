@@ -3,157 +3,219 @@
         {
             "id": "http://library.temple.edu/tul",
             "group": 12,
-            "img": "http://localhost/web_rdf/assets/icons/tul.png"
+            "img": "http://localhost/web_rdf/assets/icons/tul.png",
+            "type": "http://library.temple.edu/model#inSystem",
+            "label": "Temple University Libraries"
         },
         {
             "id": "http://library.temple.edu/building/hsl",
             "group": 1,
-            "img": "http://localhost/web_rdf/assets/icons/building.png"
+            "img": "http://localhost/web_rdf/assets/icons/building.png",
+            "type": "http://library.temple.edu/model#Building",
+            "label": "Health Sciences Libraries"
         },
         {
             "id": "http://library.temple.edu/building/hsl::http://library.temple.edu/model#Person",
             "group": 11,
-            "img": "http://localhost/web_rdf/assets/icons/persons.png"
+            "img": "http://localhost/web_rdf/assets/icons/persons.png",
+            "type": "http://library.temple.edu/model#Persons",
+            "label": "http://library.temple.edu/building/hsl::http://library.temple.edu/model#Person"
         },
         {
             "id": "http://library.temple.edu/person/jenny_pierce",
             "group": 4,
-            "img": "http://localhost/web_rdf/assets/icons/person.png"
+            "img": "http://localhost/web_rdf/assets/icons/person.png",
+            "type": "http://library.temple.edu/model#Person",
+            "label": "Pierce, Jenny"
         },
         {
             "id": "http://library.temple.edu/person/lauri_fennell",
             "group": 4,
-            "img": "http://localhost/web_rdf/assets/icons/person.png"
+            "img": "http://localhost/web_rdf/assets/icons/person.png",
+            "type": "http://library.temple.edu/model#Person",
+            "label": "Fennell, Lauri"
         },
         {
             "id": "http://library.temple.edu/person/royce_sargeant",
             "group": 4,
-            "img": "http://localhost/web_rdf/assets/icons/person.png"
+            "img": "http://localhost/web_rdf/assets/icons/person.png",
+            "type": "http://library.temple.edu/model#Person",
+            "label": "Sargeant, Royce"
         },
         {
             "id": "http://library.temple.edu/building/hsl::http://library.temple.edu/model#Service",
             "group": 14,
-            "img": "http://localhost/web_rdf/assets/icons/services.png"
+            "img": "http://localhost/web_rdf/assets/icons/services.png",
+            "type": "http://library.temple.edu/model#Services",
+            "label": "http://library.temple.edu/building/hsl::http://library.temple.edu/model#Service"
         },
         {
             "id": "http://library.temple.edu/service/hsl_consult",
             "group": 13,
-            "img": "http://localhost/web_rdf/assets/icons/service.png"
+            "img": "http://localhost/web_rdf/assets/icons/service.png",
+            "type": "http://library.temple.edu/model#Service",
+            "label": "Service: HSL / Consultation"
         },
         {
             "id": "http://library.temple.edu/service/hsl_ill",
             "group": 13,
-            "img": "http://localhost/web_rdf/assets/icons/service.png"
+            "img": "http://localhost/web_rdf/assets/icons/service.png",
+            "type": "http://library.temple.edu/model#Service",
+            "label": "Service: HSL / ILL"
         },
         {
             "id": "http://library.temple.edu/service/hsl_instruction",
             "group": 13,
-            "img": "http://localhost/web_rdf/assets/icons/service.png"
+            "img": "http://localhost/web_rdf/assets/icons/service.png",
+            "type": "http://library.temple.edu/model#Service",
+            "label": "Service: HSL / Instruction"
         },
         {
             "id": "http://library.temple.edu/service/hsl_photocopy",
             "group": 13,
-            "img": "http://localhost/web_rdf/assets/icons/service.png"
+            "img": "http://localhost/web_rdf/assets/icons/service.png",
+            "type": "http://library.temple.edu/model#Service",
+            "label": "Service: HSL / Photocopying"
         },
         {
             "id": "http://library.temple.edu/service/hsl_printing",
             "group": 13,
-            "img": "http://localhost/web_rdf/assets/icons/service.png"
+            "img": "http://localhost/web_rdf/assets/icons/service.png",
+            "type": "http://library.temple.edu/model#Service",
+            "label": "Service: HSL / Printing"
         },
         {
             "id": "http://library.temple.edu/service/hsl_purchase",
             "group": 13,
-            "img": "http://localhost/web_rdf/assets/icons/service.png"
+            "img": "http://localhost/web_rdf/assets/icons/service.png",
+            "type": "http://library.temple.edu/model#Service",
+            "label": "Service: HSL / Purchasing"
         },
         {
             "id": "http://library.temple.edu/service/hsl_reference",
             "group": 13,
-            "img": "http://localhost/web_rdf/assets/icons/service.png"
+            "img": "http://localhost/web_rdf/assets/icons/service.png",
+            "type": "http://library.temple.edu/model#Service",
+            "label": "Service: HSL / Reference"
         },
         {
             "id": "http://library.temple.edu/service/hsl_reserves",
             "group": 13,
-            "img": "http://localhost/web_rdf/assets/icons/service.png"
+            "img": "http://localhost/web_rdf/assets/icons/service.png",
+            "type": "http://library.temple.edu/model#Service",
+            "label": "Service: HSL / Reserves"
         },
         {
             "id": "http://library.temple.edu/service/hsl_suggest",
             "group": 13,
-            "img": "http://localhost/web_rdf/assets/icons/service.png"
+            "img": "http://localhost/web_rdf/assets/icons/service.png",
+            "type": "http://library.temple.edu/model#Service",
+            "label": "Service: HSL / Suggest"
         },
         {
             "id": "http://library.temple.edu/service/hsl_tutorials",
             "group": 13,
-            "img": "http://localhost/web_rdf/assets/icons/service.png"
+            "img": "http://localhost/web_rdf/assets/icons/service.png",
+            "type": "http://library.temple.edu/model#Service",
+            "label": "Service: HSL / Tutorials"
         },
         {
             "id": "http://library.temple.edu/service/hsl_workshops",
             "group": 13,
-            "img": "http://localhost/web_rdf/assets/icons/service.png"
+            "img": "http://localhost/web_rdf/assets/icons/service.png",
+            "type": "http://library.temple.edu/model#Service",
+            "label": "Service: HSL / Workshops"
         },
         {
             "id": "http://library.temple.edu/building/paley",
             "group": 1,
-            "img": "http://localhost/web_rdf/assets/icons/building.png"
+            "img": "http://localhost/web_rdf/assets/icons/building.png",
+            "type": "http://library.temple.edu/model#Building",
+            "label": "Samuel Paley Library"
         },
         {
             "id": "http://library.temple.edu/building/paley::http://library.temple.edu/model#Group",
             "group": 10,
-            "img": "http://localhost/web_rdf/assets/icons/groups.png"
+            "img": "http://localhost/web_rdf/assets/icons/groups.png",
+            "type": "http://library.temple.edu/model#Groups",
+            "label": "http://library.temple.edu/building/paley::http://library.temple.edu/model#Group"
         },
         {
             "id": "http://library.temple.edu/group/dsc",
             "group": 3,
-            "img": "http://localhost/web_rdf/assets/icons/group.png"
+            "img": "http://localhost/web_rdf/assets/icons/group.png",
+            "type": "http://library.temple.edu/model#Group",
+            "label": "Team: Digital Scholarship Development"
         },
         {
             "id": "http://library.temple.edu/group/scrc",
             "group": 3,
-            "img": "http://localhost/web_rdf/assets/icons/group.png"
+            "img": "http://localhost/web_rdf/assets/icons/group.png",
+            "type": "http://library.temple.edu/model#Group",
+            "label": "Department: Special Collections Resource Center"
         },
         {
             "id": "http://library.temple.edu/space/scrc",
             "group": 2,
-            "img": "http://localhost/web_rdf/assets/icons/space.png"
+            "img": "http://localhost/web_rdf/assets/icons/space.png",
+            "type": "http://library.temple.edu/model#Space",
+            "label": "Special Collections Resource Center"
         },
         {
             "id": "http://library.temple.edu/building/paley::http://library.temple.edu/model#Person",
             "group": 11,
-            "img": "http://localhost/web_rdf/assets/icons/persons.png"
+            "img": "http://localhost/web_rdf/assets/icons/persons.png",
+            "type": "http://library.temple.edu/model#Persons",
+            "label": "http://library.temple.edu/building/paley::http://library.temple.edu/model#Person"
         },
         {
             "id": "http://library.temple.edu/person/jennifer_grayburn",
             "group": 4,
-            "img": "http://localhost/web_rdf/assets/icons/person.png"
+            "img": "http://localhost/web_rdf/assets/icons/person.png",
+            "type": "http://library.temple.edu/model#Person",
+            "label": "Grayburn, Jennifer"
         },
         {
             "id": "http://library.temple.edu/person/katy_rawdon",
             "group": 4,
-            "img": "http://localhost/web_rdf/assets/icons/person.png"
+            "img": "http://localhost/web_rdf/assets/icons/person.png",
+            "type": "http://library.temple.edu/model#Person",
+            "label": "Rawdon, Katy"
         },
         {
             "id": "http://library.temple.edu/person/margery_sly",
             "group": 4,
-            "img": "http://localhost/web_rdf/assets/icons/person.png"
+            "img": "http://localhost/web_rdf/assets/icons/person.png",
+            "type": "http://library.temple.edu/model#Person",
+            "label": "Sly, Margery"
         },
         {
             "id": "http://library.temple.edu/person/matt_shoemaker",
             "group": 4,
-            "img": "http://localhost/web_rdf/assets/icons/person.png"
+            "img": "http://localhost/web_rdf/assets/icons/person.png",
+            "type": "http://library.temple.edu/model#Person",
+            "label": "Shoemaker, Matt"
         },
         {
             "id": "http://library.temple.edu/building/paley::http://library.temple.edu/model#Space",
             "group": 9,
-            "img": "http://localhost/web_rdf/assets/icons/spaces.png"
+            "img": "http://localhost/web_rdf/assets/icons/spaces.png",
+            "type": "http://library.temple.edu/model#Spaces",
+            "label": "http://library.temple.edu/building/paley::http://library.temple.edu/model#Space"
         },
         {
             "id": "http://library.temple.edu/space/dsc",
             "group": 2,
-            "img": "http://localhost/web_rdf/assets/icons/space.png"
+            "img": "http://localhost/web_rdf/assets/icons/space.png",
+            "type": "http://library.temple.edu/model#Space",
+            "label": "Digital Scholarship Center"
         },
         {
             "id": "http://library.temple.edu/space/mediaservices",
             "group": 2,
-            "img": "http://localhost/web_rdf/assets/icons/space.png"
+            "img": "http://localhost/web_rdf/assets/icons/space.png",
+            "type": "http://library.temple.edu/model#Space",
+            "label": "Media Services"
         }
     ],
     "links": [
