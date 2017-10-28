@@ -11,40 +11,47 @@
 @prefix tul: <http://library.temple.edu/model#> .
 
 <http://library.temple.edu/person/matt_shoemaker>
-    <http://www.w3.org/2000/01/rdf-schema#type> <http://library.temple.edu/model#Person> ;
+    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://library.temple.edu/model#Person> ;
     <http://www.w3.org/2000/01/rdf-schema#label> "Shoemaker, Matt"@en ;
     <http://library.temple.edu/model#inGroup> <http://library.temple.edu/group/dsc> ;
+    <http://library.temple.edu/model#inSystem> <http://library.temple.edu/tul> ;
     <http://library.temple.edu/model#inBuilding> <http://library.temple.edu/building/paley> .
 
 <http://library.temple.edu/person/jennifer_grayburn>
-    <http://www.w3.org/2000/01/rdf-schema#type> <http://library.temple.edu/model#Person> ;
+    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://library.temple.edu/model#Person> ;
     <http://www.w3.org/2000/01/rdf-schema#label> "Grayburn, Jennifer"@en ;
     <http://library.temple.edu/model#inGroup> <http://library.temple.edu/group/dsc> ;
+    <http://library.temple.edu/model#inSystem> <http://library.temple.edu/tul> ;
     <http://library.temple.edu/model#inBuilding> <http://library.temple.edu/building/paley> .
 
 <http://library.temple.edu/person/margery_sly>
-    <http://www.w3.org/2000/01/rdf-schema#type> <http://library.temple.edu/model#Person> ;
+    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://library.temple.edu/model#Person> ;
     <http://www.w3.org/2000/01/rdf-schema#label> "Sly, Margery"@en ;
     <http://library.temple.edu/model#inGroup> <http://library.temple.edu/group/scrc> ;
+    <http://library.temple.edu/model#inSystem> <http://library.temple.edu/tul> ;
     <http://library.temple.edu/model#inBuilding> <http://library.temple.edu/building/paley> .
 
 <http://library.temple.edu/person/katy_rawdon>
-    <http://www.w3.org/2000/01/rdf-schema#type> <http://library.temple.edu/model#Person> ;
+    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://library.temple.edu/model#Person> ;
     <http://www.w3.org/2000/01/rdf-schema#label> "Rawdon, Katy"@en ;
     <http://library.temple.edu/model#inGroup> <http://library.temple.edu/group/scrc> ;
+    <http://library.temple.edu/model#inSystem> <http://library.temple.edu/tul> ;
     <http://library.temple.edu/model#inBuilding> <http://library.temple.edu/building/paley> .
 
 <http://library.temple.edu/person/jenny_pierce>
-    <http://www.w3.org/2000/01/rdf-schema#type> <http://library.temple.edu/model#Person> ;
+    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://library.temple.edu/model#Person> ;
     <http://www.w3.org/2000/01/rdf-schema#label> "Pierce, Jenny"@en ;
+    <http://library.temple.edu/model#inSystem> <http://library.temple.edu/tul> ;
     <http://library.temple.edu/model#inBuilding> <http://library.temple.edu/building/hsl> .
 
 <http://library.temple.edu/person/lauri_fennell>
-    <http://www.w3.org/2000/01/rdf-schema#type> <http://library.temple.edu/model#Person> ;
+    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://library.temple.edu/model#Person> ;
     <http://www.w3.org/2000/01/rdf-schema#label> "Fennell, Lauri"@en ;
+    <http://library.temple.edu/model#inSystem> <http://library.temple.edu/tul> ;
     <http://library.temple.edu/model#inBuilding> <http://library.temple.edu/building/hsl> .
 
 <http://library.temple.edu/person/royce_sargeant>
-    <http://www.w3.org/2000/01/rdf-schema#type> <http://library.temple.edu/model#Person> ;
+    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://library.temple.edu/model#Person> ;
     <http://www.w3.org/2000/01/rdf-schema#label> "Sargeant, Royce"@en ;
+    <http://library.temple.edu/model#inSystem> <http://library.temple.edu/tul> ;
     <http://library.temple.edu/model#inBuilding> <http://library.temple.edu/building/hsl> .

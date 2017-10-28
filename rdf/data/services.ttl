@@ -10,69 +10,79 @@
 @prefix rooms: <http://vocab.deri.ie/rooms#> .
 @prefix tul: <http://library.temple.edu/model#> .
 
-
 <http://library.temple.edu/service/hsl_photocopy>
-    <http://www.w3.org/2000/01/rdf-schema#type> <http://library.temple.edu/model#Service> ;
+    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://library.temple.edu/model#Service> ;
     <http://www.w3.org/2000/01/rdf-schema#label> "Service: HSL / Photocopying"@en ;
     <http://library.temple.edu/model#inBuilding> <http://library.temple.edu/building/hsl> ;
+    <http://library.temple.edu/model#inSystem> <http://library.temple.edu/tul> ;
     <http://library.temple.edu/model#old_url> "http://library.temple.edu/help/howdoi/make-photocopiesuse-c" .
 
 <http://library.temple.edu/service/hsl_consult>
-    <http://www.w3.org/2000/01/rdf-schema#type> <http://library.temple.edu/model#Service> ;
+    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://library.temple.edu/model#Service> ;
     <http://www.w3.org/2000/01/rdf-schema#label> "Service: HSL / Consultation"@en ;
     <http://library.temple.edu/model#inBuilding> <http://library.temple.edu/building/hsl> ;
+    <http://library.temple.edu/model#inSystem> <http://library.temple.edu/tul> ;
     <http://library.temple.edu/model#old_url> "http://library.temple.edu/hsl/services/consult" .
 
 <http://library.temple.edu/service/hsl_ill>
-    <http://www.w3.org/2000/01/rdf-schema#type> <http://library.temple.edu/model#Service> ;
+    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://library.temple.edu/model#Service> ;
     <http://www.w3.org/2000/01/rdf-schema#label> "Service: HSL / ILL"@en ;
     <http://library.temple.edu/model#inBuilding> <http://library.temple.edu/building/hsl> ;
+    <http://library.temple.edu/model#inSystem> <http://library.temple.edu/tul> ;
     <http://library.temple.edu/model#old_url> "http://library.temple.edu/hsl/services/interlibrary-loan" .
 
 <http://library.temple.edu/service/hsl_printing>
-    <http://www.w3.org/2000/01/rdf-schema#type> <http://library.temple.edu/model#Service> ;
+    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://library.temple.edu/model#Service> ;
     <http://www.w3.org/2000/01/rdf-schema#label> "Service: HSL / Printing"@en ;
     <http://library.temple.edu/model#inBuilding> <http://library.temple.edu/building/hsl> ;
+    <http://library.temple.edu/model#inSystem> <http://library.temple.edu/tul> ;
     <http://library.temple.edu/model#old_url> "http://library.temple.edu/hsl/services/printing" .
 
 <http://library.temple.edu/service/hsl_instruction>
-    <http://www.w3.org/2000/01/rdf-schema#type> <http://library.temple.edu/model#Service> ;
+    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://library.temple.edu/model#Service> ;
     <http://www.w3.org/2000/01/rdf-schema#label> "Service: HSL / Instruction"@en ;
     <http://library.temple.edu/model#inBuilding> <http://library.temple.edu/building/hsl> ;
+    <http://library.temple.edu/model#inSystem> <http://library.temple.edu/tul> ;
     <http://library.temple.edu/model#old_url> "http://library.temple.edu/hsl/services/instruction" .
 
 <http://library.temple.edu/service/hsl_purchase>
-    <http://www.w3.org/2000/01/rdf-schema#type> <http://library.temple.edu/model#Service> ;
+    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://library.temple.edu/model#Service> ;
     <http://www.w3.org/2000/01/rdf-schema#label> "Service: HSL / Purchasing"@en ;
     <http://library.temple.edu/model#inBuilding> <http://library.temple.edu/building/hsl> ;
+    <http://library.temple.edu/model#inSystem> <http://library.temple.edu/tul> ;
     <http://library.temple.edu/model#old_url> "http://library.temple.edu/hsl/services/purchase" .
 
 <http://library.temple.edu/service/hsl_reference>
-    <http://www.w3.org/2000/01/rdf-schema#type> <http://library.temple.edu/model#Service> ;
+    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://library.temple.edu/model#Service> ;
     <http://www.w3.org/2000/01/rdf-schema#label> "Service: HSL / Reference"@en ;
     <http://library.temple.edu/model#inBuilding> <http://library.temple.edu/building/hsl> ;
+    <http://library.temple.edu/model#inSystem> <http://library.temple.edu/tul> ;
     <http://library.temple.edu/model#old_url> "http://library.temple.edu/hsl/services/reference" .
 
 <http://library.temple.edu/service/hsl_reserves>
-    <http://www.w3.org/2000/01/rdf-schema#type> <http://library.temple.edu/model#Service> ;
+    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://library.temple.edu/model#Service> ;
     <http://www.w3.org/2000/01/rdf-schema#label> "Service: HSL / Reserves"@en ;
     <http://library.temple.edu/model#inBuilding> <http://library.temple.edu/building/hsl> ;
+    <http://library.temple.edu/model#inSystem> <http://library.temple.edu/tul> ;
     <http://library.temple.edu/model#old_url> "http://library.temple.edu/hsl/services/reserves" .
 
 <http://library.temple.edu/service/hsl_suggest>
-    <http://www.w3.org/2000/01/rdf-schema#type> <http://library.temple.edu/model#Service> ;
+    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://library.temple.edu/model#Service> ;
     <http://www.w3.org/2000/01/rdf-schema#label> "Service: HSL / Suggest"@en ;
     <http://library.temple.edu/model#inBuilding> <http://library.temple.edu/building/hsl> ;
+    <http://library.temple.edu/model#inSystem> <http://library.temple.edu/tul> ;
     <http://library.temple.edu/model#old_url> "http://library.temple.edu/hsl/services/suggest" .
 
 <http://library.temple.edu/service/hsl_tutorials>
-    <http://www.w3.org/2000/01/rdf-schema#type> <http://library.temple.edu/model#Service> ;
+    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://library.temple.edu/model#Service> ;
     <http://www.w3.org/2000/01/rdf-schema#label> "Service: HSL / Tutorials"@en ;
     <http://library.temple.edu/model#inBuilding> <http://library.temple.edu/building/hsl> ;
+    <http://library.temple.edu/model#inSystem> <http://library.temple.edu/tul> ;
     <http://library.temple.edu/model#old_url> "http://library.temple.edu/hsl/services/tutorials" .
 
 <http://library.temple.edu/service/hsl_workshops>
-    <http://www.w3.org/2000/01/rdf-schema#type> <http://library.temple.edu/model#Service> ;
+    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://library.temple.edu/model#Service> ;
     <http://www.w3.org/2000/01/rdf-schema#label> "Service: HSL / Workshops"@en ;
     <http://library.temple.edu/model#inBuilding> <http://library.temple.edu/building/hsl> ;
+    <http://library.temple.edu/model#inSystem> <http://library.temple.edu/tul> ;
     <http://library.temple.edu/model#old_url> "http://library.temple.edu/hsl/services/workshops" .

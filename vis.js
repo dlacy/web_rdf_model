@@ -1,3 +1,14 @@
+//
+var const_prefixes = { bd:"http://www.bigdata.com/rdf#", bds:"http://www.bigdata.com/rdf/search#", dc:"http://purl.org/dc/elements/1.1/", fn:"http://www.w3.org/2005/xpath-functions#", foaf:"http://xmlns.com/foaf/0.1/", hint:"http://www.bigdata.com/queryHints#", owl:"http://www.w3.org/2002/07/owl#", rdf:"http://www.w3.org/1999/02/22-rdf-syntax-ns#", rdfs:"http://www.w3.org/2000/01/rdf-schema#", rooms:"http://vocab.deri.ie/rooms#", sesame:"http://www.openrdf.org/schema/sesame#", tul:"http://library.temple.edu/model#", wgs84:"http://www.w3.org/2003/01/geo/wgs84_pos#", xsd:"http://www.w3.org/2001/XMLSchema#" };
+
+function prefixifyURI(uri, prefixes) {
+    for (key in prefixes) {
+        if (uri.includes(prefixes[key])) {
+            return key + ":" + uri.substring(prefixes[key].length);
+        }
+    }
+    return uri;
+}
 
 //	graph data store
 var graph;
@@ -11,7 +22,6 @@ var N3Util = N3.Util;
 
 // sparql query
 var getstmts = function(subject) {
-                console.log(subject);
                 return `
                     CONSTRUCT { <${subject}> ?p ?o }
                     where
@@ -189,7 +199,7 @@ function update() {
                                 .attr("height", 500)
                             .append("xhtml:body")
                                 .style("font", "14px 'Helvetica Neue'")
-                                .html(triple.predicate + " :: " + triple.object);
+                                .html(prefixifyURI(triple.predicate, const_prefixes) + " :: " + prefixifyURI(triple.object, const_prefixes));
 
                        } else {
                          console.log(prefixes);
