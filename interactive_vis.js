@@ -27,7 +27,9 @@ var groups = {"http://library.temple.edu/model#Building": {"id": 1, "img": "http
           "http://library.temple.edu/model#Persons": {"id": 11, "img": "http://localhost/web_rdf/assets/icons/persons.png"},
           "http://library.temple.edu/model#inSystem": {"id": 12, "img": "http://localhost/web_rdf/assets/icons/tul.png"},
           "http://library.temple.edu/model#Service": {"id": 13, "img": "http://localhost/web_rdf/assets/icons/service.png"},
-          "http://library.temple.edu/model#Services": {"id": 14, "img": "http://localhost/web_rdf/assets/icons/services.png"}
+          "http://library.temple.edu/model#Services": {"id": 14, "img": "http://localhost/web_rdf/assets/icons/services.png"},
+          "http://library.temple.edu/model#System": {"id": 15, "img": "http://localhost/web_rdf/assets/icons/system.png"},
+          "http://library.temple.edu/model#Systems": {"id": 16, "img": "http://localhost/web_rdf/assets/icons/systems.png"}
           }
 
 var type_relationships = [];
@@ -73,7 +75,7 @@ var children_query = function(o) {
             ?s rdf:type ?type .
             }
             `
-    //console.log(query);
+    console.log(query);
     return query;
 }
 
@@ -85,21 +87,35 @@ var parents_query = function(s) {
             <${s}> ?p ?o .
             ?o rdf:type ?type .
             }
+            VALUES ?type { <http://library.temple.edu/model#Space> <http://library.temple.edu/model#Group> <http://library.temple.edu/model#Building> <http://library.temple.edu/model#Person> <http://library.temple.edu/model#Service>}
             `
-    //console.log(query);
+    console.log(query);
     return query;
 }
 
 var subject_query = function(p, o, type) {
     query = `
-            select ?s ?s_label
+            select ?s ?label
             where {
               ?s ?p <${o}> .
               ?s rdf:type <${type}> .
-              ?s rdfs:label ?s_label .
+              ?s rdfs:label ?label .
             }
             `
-    //console.log(query);
+    console.log(query);
+    return query;
+}
+
+var object_query = function(p, s, type) {
+    query = `
+            select ?s ?label
+            where {
+              <${s}> ?p ?s .
+              ?s rdf:type <${type}> .
+              ?s rdfs:label ?label .
+            }
+            `
+    console.log(query);
     return query;
 }
 
@@ -294,8 +310,8 @@ function update() {
                     console.log(d);
                     //console.log(subject_query(d.p, d.o, d.type));
                     //getNodes(d, "children");
-                    getNodes(d);
-
+                    getNodes(d, "subject");
+                    getNodes(d, "object");
                 }
                 d3.select(this).classed("expanded", true);
             }
@@ -369,6 +385,7 @@ function getContainers(d, direction) {
     } else {
         query = parents_query(d.id);
     }
+    console.log(d);
     req2 = d3.request("http://45.33.93.64/blazegraph/sparql")
         .header("Accept", "application/json")
         .header("Content-Type", "application/sparql-query")
@@ -421,23 +438,28 @@ function getContainers(d, direction) {
         });
 }
 
-function getNodes(d) {
+function getNodes(d, direction) {
+    if (direction == "object") {
+        query = subject_query(d.p, d.o, d.type);
+    } else {
+        query = object_query(d.p, d.o, d.type);
+    }
     req3 = d3.request("http://45.33.93.64/blazegraph/sparql")
         .header("Accept", "application/json")
         .header("Content-Type", "application/sparql-query")
         .response(function(xhr) {
             return xhr.responseText;
         })
-        .post(subject_query(d.p, d.o, d.type), function(data) {
+        .post(query, function(data) {
             //console.log(data);
             sparql_response = JSON.parse(data);
             results = sparql_response.results.bindings;
-            //console.log(results);
+            console.log(results);
             new_nodes = [];
             new_links = [];
             for (k in results) {
                 s = results[k].s.value;
-                s_label = results[k].s_label.value;
+                s_label = results[k].label.value;
                 //console.log(s);
                 //console.log(s_label);
                 id = d.id + "::" + s;
@@ -476,6 +498,7 @@ function getNodes(d) {
             update();
         });
 }
+
 //	load and save data
 d3.json("node_link_model.json", function(err, g) {
 	if (err) throw err;
