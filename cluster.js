@@ -73,7 +73,12 @@ function update() {
     circle = circle.data(nodes)
         .enter().append("circle")
             .attr("r", function(d) { return d.radius; })
-            .style("fill", function(d) { return color(d.cluster); });
+            .style("fill", function(d) { return color(d.cluster); })
+            .call(d3.drag()
+                .on("start", dragstarted)
+                .on("drag", dragged)
+                .on("end", dragended)
+            );
 }
 
 
@@ -98,4 +103,21 @@ function forceCluster(alpha) {
     node.vx -= (node.x - cluster.x) * k;
     node.vy -= (node.y - cluster.y) * k;
   }
+}
+
+function dragstarted(d) {
+    if (!d3.event.active) simulation.alphaTarget(0.3).restart();
+    d.fx = d.x;
+    d.fy = d.y;
+}
+
+function dragged(d) {
+    d.fx = d3.event.x;
+    d.fy = d3.event.y;
+}
+
+function dragended(d) {
+    if (!d3.event.active) simulation.alphaTarget(0);
+    d.fx = null;
+    d.fy = null;
 }
