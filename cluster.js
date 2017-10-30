@@ -82,6 +82,7 @@ var svg = d3.select("body").append("svg")
 
 var circle = svg.selectAll("circle");
 var icon = svg.selectAll("icon");
+var handle = svg.selectAll("handle");
 
 function update() {
 	// EXIT
@@ -93,12 +94,28 @@ function update() {
         .force("cluster", forceCluster)
         .on("tick", tick);
 
-    //;
-    //circle.exit().remove();
     circle = circle.data(nodes)
         .enter().append("circle")
         .attr("r", function(d) { return d.radius; })
         .style("fill", function(d) { return color(d.cluster); })
+        .merge(circle);
+
+	icon = icon.data(nodes)
+	    .enter().append("svg:image")
+            .attr("class", "icon")
+            .attr("xlink:href", function(d) { return d.img; })
+            .attr("width", "20")
+            .attr("height", "20")
+            .merge(icon);;
+    icon.append("title")
+        .text(function(d) { return d.id; });
+
+    // TODO: Figure out how to create handle using "g" nodes
+    handle = handle.data(nodes)
+        .enter().append("circle")
+        .attr("r", function(d) { return d.radius; })
+        .style("fill", function(d) { return color(d.cluster); })
+        .style("opacity", 0)
         .call(d3.drag()
             .on("start", dragstarted)
             .on("drag", dragged)
@@ -156,26 +173,18 @@ function update() {
                 update();
             });
         })
-        .merge(circle);
+        .merge(handle);
 
-    	// Icon ENTER
-	icon = icon.data(nodes)
-	    .enter().append("svg:image")
-            .attr("class", "icon")
-            .attr("xlink:href", function(d) { return d.img; })
-            .attr("width", "20")
-            .attr("height", "20")
-            .merge(icon);;
-    icon.append("title")
-        .text(function(d) { return d.id; });
 
-    console.log(clusters);
-    console.log(nodes);
-    console.log(unique_nodes);
+
 }
 
 function tick() {
     circle
+        .attr("cx", function(d) { return d.x; })
+        .attr("cy", function(d) { return d.y; });
+
+    handle
         .attr("cx", function(d) { return d.x; })
         .attr("cy", function(d) { return d.y; });
 
