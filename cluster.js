@@ -88,7 +88,6 @@ function update() {
 	// EXIT
 	//icon.exit().remove();
 
-
     simulation.force("charge", d3.forceManyBody())
         .nodes(nodes)
         .force("cluster", forceCluster)
@@ -96,17 +95,21 @@ function update() {
 
     circle = circle.data(nodes)
         .enter().append("circle")
+        .classed("inactive", true)
         .attr("r", function(d) { return d.radius; })
-        .style("fill", function(d) { return color(d.cluster); })
-        .merge(circle);
-
+        .style("fill", function(d) { if (d.active === 1) { console.log("active"); return color(d.cluster); } else { console.log("inactive"); return "#CCCCCC"; }})
+        .merge(circle)
+            .attr("r", function(d) { return d.radius; })
+            .style("fill", function(d) { if (d.active === 1) { console.log("active"); return color(d.cluster); } else { console.log("inactive"); return "#CCCCCC"; }});
 	icon = icon.data(nodes)
 	    .enter().append("svg:image")
             .attr("class", "icon")
             .attr("xlink:href", function(d) { return d.img; })
-            .attr("width", "20")
-            .attr("height", "20")
-            .merge(icon);;
+            .attr("width", function(d) { return d.radius; })
+            .attr("height", function(d) { return d.radius; })
+            .merge(icon)
+                .attr("width", function(d) { return d.radius; })
+                .attr("height", function(d) { return d.radius; });
     icon.append("title")
         .text(function(d) { return d.id; });
 
@@ -122,6 +125,20 @@ function update() {
             .on("end", dragended)
         )
         .on("click", function(d) {
+            for (key in nodes) {
+                nodes[key].active = 0;
+                nodes[key].group = 0;
+                nodes[key].cluster = 0;
+                nodes[key].radius = 2;
+            }
+            key = getNodeKey(d.id);
+            if (key) {
+                nodes[key].group = groups[nodes[key].type].id;
+                nodes[key].active = 1;
+                nodes[key].cluster = groups[nodes[key].type].id;
+                nodes[key].radius = 20;
+            }
+
             req = d3.request("http://45.33.93.64/blazegraph/sparql")
             .header("Accept", "application/json")
             .header("Content-Type", "application/sparql-query")
@@ -160,15 +177,25 @@ function update() {
                         "img": groups[type].img,
                         "label": label,
                         "radius": r,
-                        "cluster": i
+                        "cluster": i,
+                        "active": 1
                     };
+                    //updated_node = nodes.filter(function(d) { return d.id == id });
+                    //nodes.splice(updated_node, 1)
+
+                    key = getNodeKey(id);
+                    if (key) {
+                        nodes[key] = new_nodes[id];
+                    }
+
+                    //console.log(new_nodes[id]);
                     if (!clusters[i] || (r > clusters[i].radius)) clusters[i] = new_nodes[id];
                 }
                 for (new_node in new_nodes) {
                     if (!unique_nodes[new_nodes[new_node].id]) {
                         unique_nodes[new_nodes[new_node].id] = new_nodes[new_node];
                         nodes.push(new_nodes[new_node]);
-                    }
+                   }
                 }
                 update();
             });
@@ -176,7 +203,8 @@ function update() {
         .merge(handle);
 
 
-
+    console.log(nodes);
+    console.log(clusters);
 }
 
 function tick() {
@@ -189,8 +217,8 @@ function tick() {
         .attr("cy", function(d) { return d.y; });
 
     icon
-        .attr("x", function(d) { return d.x - 10; })
-        .attr("y", function(d) { return d.y - 10; });
+        .attr("x", function(d) { return (d.x - (d.radius/2)); })
+        .attr("y", function(d) { return (d.y - (d.radius/2)); });
 }
 
 function forceCluster(alpha) {
@@ -227,28 +255,40 @@ graph = {
     "nodes": [
         {
             "id": "http://library.temple.edu/tul",
-            "group": 15,
+            "group": 0,
             "img": "http://localhost/web_rdf/assets/icons/tul.png",
             "type": "http://library.temple.edu/model#System",
             "label": "Temple University Libraries",
-            "entity": "node"
+            "entity": "node",
+            "radius": 30,
+            "cluster": 0,
+            "active": 0
         }
     ],
     "links": []
 }
 
-
+function getNodeKey(id) {
+    for (key in nodes) {
+        if (nodes[key].id == id) {
+            return key;
+        }
+    }
+    return null;
+}
 for (node in graph.nodes) {
     //i = Math.floor(Math.random() * m);
     //r = Math.sqrt((i + 1) / m * -Math.log(Math.random())) * maxRadius;
     i = graph.nodes[node].group;
     //r = graph.nodes[node].group;
     r = 20;
-    graph.nodes[node].cluster = i;
-    graph.nodes[node].radius = r;
+    //graph.nodes[node].cluster = i;
+    //graph.nodes[node].radius = r;
     nodes = graph.nodes;
     unique_nodes[nodes[node].id] = nodes[node];
     if (!clusters[i] || (r > clusters[i].radius)) clusters[i] = nodes[node];
+    clusters[15] = nodes[node];
+    //clusters[0] = {"active": 0, "radius": 20, "cluster": 0, "index": 0};
 }
 
 update();
