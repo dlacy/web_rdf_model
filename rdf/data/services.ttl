@@ -86,3 +86,78 @@
     <http://library.temple.edu/model#inBuilding> <http://library.temple.edu/building/hsl> ;
     <http://library.temple.edu/model#inSystem> <http://library.temple.edu/tul> ;
     <http://library.temple.edu/model#old_url> "http://library.temple.edu/hsl/services/workshops" .
+
+<http://library.temple.edu/service/accessibility>
+    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://library.temple.edu/model#Service> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Service: Paley / Accessibility"@en ;
+    <http://library.temple.edu/model#inBuilding> <http://library.temple.edu/building/paley> ;
+    <http://library.temple.edu/model#inSystem> <http://library.temple.edu/tul> ;
+    <http://library.temple.edu/model#old_url> "http://library.temple.edu/services/accessibility" .
+
+<http://library.temple.edu/service/borrowing>
+    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://library.temple.edu/model#Service> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Service: Paley / Borrowing"@en ;
+    <http://library.temple.edu/model#inBuilding> <http://library.temple.edu/building/paley> ;
+    <http://library.temple.edu/model#inSystem> <http://library.temple.edu/tul> ;
+    <http://library.temple.edu/model#old_url> "http://library.temple.edu/services/borrowing" .
+
+<http://library.temple.edu/service/community>
+    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://library.temple.edu/model#Service> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Service: Paley / Community Services"@en ;
+    <http://library.temple.edu/model#inBuilding> <http://library.temple.edu/building/paley> ;
+    <http://library.temple.edu/model#inSystem> <http://library.temple.edu/tul> ;
+    <http://library.temple.edu/model#old_url> "http://library.temple.edu/services/community" .
+
+<http://library.temple.edu/service/eduroam>
+    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://library.temple.edu/model#Service> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Service: eduroam"@en ;
+    <http://library.temple.edu/model#inSystem> <http://library.temple.edu/tul> ;
+    <http://library.temple.edu/model#old_url> "http://library.temple.edu/services/community/eduroam" .
+
+<http://library.temple.edu/service/ill>
+    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://library.temple.edu/model#Service> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Service: Inter-Library Loan (ILL)"@en ;
+    <http://library.temple.edu/model#inSystem> <http://library.temple.edu/tul> ;
+    <http://library.temple.edu/model#old_url> "http://library.temple.edu/services/ill" .
+
+<http://library.temple.edu/service/library-instruction>
+    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://library.temple.edu/model#Service> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Service: Paley / Library Instruction"@en ;
+    <http://library.temple.edu/model#inBuilding> <http://library.temple.edu/building/paley> ;
+    <http://library.temple.edu/model#inSystem> <http://library.temple.edu/tul> ;
+    <http://library.temple.edu/model#old_url> "http://library.temple.edu/services/library-instruction" .
+
+<http://library.temple.edu/service/borrowing-policies>
+    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://library.temple.edu/model#Service> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Service: Paley / Borrowing Policies"@en ;
+    <http://library.temple.edu/model#inBuilding> <http://library.temple.edu/building/paley> ;
+    <http://library.temple.edu/model#inSystem> <http://library.temple.edu/tul> ;
+    <http://library.temple.edu/model#old_url> "http://library.temple.edu/services/privileges" .
+
+<http://library.temple.edu/service/reserves>
+    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://library.temple.edu/model#Service> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Service: Paley / Course Reserves"@en ;
+    <http://library.temple.edu/model#inBuilding> <http://library.temple.edu/building/paley> ;
+    <http://library.temple.edu/model#inSystem> <http://library.temple.edu/tul> ;
+    <http://library.temple.edu/model#old_url> "http://library.temple.edu/services/reserves" .
+
+<http://library.temple.edu/service/faculty-reserves>
+    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://library.temple.edu/model#Service> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Service: Paley / Faculty Reserves"@en ;
+    <http://library.temple.edu/model#inBuilding> <http://library.temple.edu/building/paley> ;
+    <http://library.temple.edu/model#inSystem> <http://library.temple.edu/tul> ;
+    <http://library.temple.edu/model#old_url> "http://library.temple.edu/services/reserves/faculty" .
+
+<http://library.temple.edu/service/reserves-fines>
+    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://library.temple.edu/model#Service> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Service: Paley / Reserves Fines"@en ;
+    <http://library.temple.edu/model#inBuilding> <http://library.temple.edu/building/paley> ;
+    <http://library.temple.edu/model#inSystem> <http://library.temple.edu/tul> ;
+    <http://library.temple.edu/model#old_url> "http://library.temple.edu/services/reserves/fines" .
+
+<http://library.temple.edu/service/undergrad>
+    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://library.temple.edu/model#Service> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Service: Paley / Undergrad Services"@en ;
+    <http://library.temple.edu/model#inBuilding> <http://library.temple.edu/building/paley> ;
+    <http://library.temple.edu/model#inSystem> <http://library.temple.edu/tul> ;
+    <http://library.temple.edu/model#old_url> "http://library.temple.edu/services/undergrad" .

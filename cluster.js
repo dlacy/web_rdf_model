@@ -110,8 +110,7 @@ function update() {
             .merge(icon)
                 .attr("width", function(d) { return d.radius; })
                 .attr("height", function(d) { return d.radius; });
-    icon.append("title")
-        .text(function(d) { return d.id; });
+
 
     // TODO: Figure out how to create handle using "g" nodes
     handle = handle.data(nodes)
@@ -136,7 +135,7 @@ function update() {
                 nodes[key].group = groups[nodes[key].type].id;
                 nodes[key].active = 1;
                 nodes[key].cluster = groups[nodes[key].type].id;
-                nodes[key].radius = 20;
+                nodes[key].radius = 40;
             }
 
             req = d3.request("http://45.33.93.64/blazegraph/sparql")
@@ -201,7 +200,8 @@ function update() {
             });
         })
         .merge(handle);
-
+    handle.append("title")
+            .text(function(d) { return d.id; });
 
     console.log(nodes);
     console.log(clusters);
