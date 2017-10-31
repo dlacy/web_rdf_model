@@ -14,16 +14,47 @@
     <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://library.temple.edu/model#System> ;
     <http://www.w3.org/2000/01/rdf-schema#label> "Temple University Library System"@en .
 
-<http://library.temple.edu/building/hsl>
-    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://library.temple.edu/model#Building> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "Health Sciences Libraries"@en ;
-    <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "40.006878" ;
-    <http://www.w3.org/2003/01/geo/wgs84_pos#long> "-75.152225" ;
-    <http://library.temple.edu/model#inSystem> <http://library.temple.edu/tul> .
+<http://library.temple.edu/building/blockson>
+	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://library.temple.edu/model#Building> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "Charles L. Blockson Afro-American Collection"@en ;
+	<http://library.temple.edu/model#inSystem> <http://library.temple.edu/tul> .
 
 <http://library.temple.edu/building/paley>
-    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://library.temple.edu/model#Building> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "Samuel Paley Library"@en ;
-    <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "39.980939" ;
-    <http://www.w3.org/2003/01/geo/wgs84_pos#long> "-75.154437" ;
-    <http://library.temple.edu/model#inSystem> <http://library.temple.edu/tul> .
+	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://library.temple.edu/model#Building> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "Samuel L. Paley Library"@en ;
+	<http://library.temple.edu/model#inSystem> <http://library.temple.edu/tul> .
+
+<http://library.temple.edu/building/ambler_campus_library>
+	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://library.temple.edu/model#Building> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "Ambler Campus Library"@en ;
+	<http://library.temple.edu/model#inSystem> <http://library.temple.edu/tul> .
+
+<http://library.temple.edu/building/harrisburg_library>
+	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://library.temple.edu/model#Building> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "Harrisburg Library"@en ;
+	<http://library.temple.edu/model#inSystem> <http://library.temple.edu/tul> .
+
+<http://library.temple.edu/building/klein_law_building>
+	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://library.temple.edu/model#Building> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "Klein Law Building"@en ;
+	<http://library.temple.edu/model#inSystem> <http://library.temple.edu/tul> .
+
+<http://library.temple.edu/building/hsl>
+	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://library.temple.edu/model#Building> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "Ginsburg Health Sciences Library"@en ;
+	<http://library.temple.edu/model#inSystem> <http://library.temple.edu/tul> .
+
+<http://library.temple.edu/building/podiatric_medicine_library>
+	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://library.temple.edu/model#Building> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "Podiatric Medicine Library"@en ;
+	<http://library.temple.edu/model#inSystem> <http://library.temple.edu/tul> .
+
+<http://library.temple.edu/building/library_depository>
+	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://library.temple.edu/model#Building> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "Library Depository"@en ;
+	<http://library.temple.edu/model#inSystem> <http://library.temple.edu/tul> .
+
+<http://library.temple.edu/building/tasb>
+	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://library.temple.edu/model#Building> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "TASB (Temple Administrative Services Building)"@en ;
+	<http://library.temple.edu/model#inSystem> <http://library.temple.edu/tul> .

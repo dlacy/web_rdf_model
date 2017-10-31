@@ -1,19 +1,19 @@
-var groups = {"http://library.temple.edu/model#Building": {"id": 1, "img": "http://localhost/web_rdf/assets/icons/building.png"},
-          "http://library.temple.edu/model#Space": {"id": 2, "img": "http://localhost/web_rdf/assets/icons/space.png"},
-          "http://library.temple.edu/model#Group": {"id": 3, "img": "http://localhost/web_rdf/assets/icons/group.png"},
-          "http://library.temple.edu/model#Person": {"id": 4, "img": "http://localhost/web_rdf/assets/icons/person.png"},
-          "http://library.temple.edu/model#inSpace": {"id": 5, "img": "http://localhost/web_rdf/assets/icons/space.png"},
-          "http://library.temple.edu/model#inGroup": {"id": 6, "img": "http://localhost/web_rdf/assets/icons/group.png"},
-          "http://library.temple.edu/model#inBuilding": {"id": 7, "img": "http://localhost/web_rdf/assets/icons/building.png"},
-          "http://library.temple.edu/model#Buildings": {"id": 8, "img": "http://localhost/web_rdf/assets/icons/buildings.png"},
-          "http://library.temple.edu/model#Spaces": {"id": 9, "img": "http://localhost/web_rdf/assets/icons/spaces.png"},
-          "http://library.temple.edu/model#Groups": {"id": 10, "img": "http://localhost/web_rdf/assets/icons/groups.png"},
-          "http://library.temple.edu/model#Persons": {"id": 11, "img": "http://localhost/web_rdf/assets/icons/persons.png"},
-          "http://library.temple.edu/model#inSystem": {"id": 12, "img": "http://localhost/web_rdf/assets/icons/tul.png"},
-          "http://library.temple.edu/model#Service": {"id": 13, "img": "http://localhost/web_rdf/assets/icons/service.png"},
-          "http://library.temple.edu/model#Services": {"id": 14, "img": "http://localhost/web_rdf/assets/icons/services.png"},
-          "http://library.temple.edu/model#System": {"id": 15, "img": "http://localhost/web_rdf/assets/icons/system.png"},
-          "http://library.temple.edu/model#Systems": {"id": 16, "img": "http://localhost/web_rdf/assets/icons/systems.png"}
+var groups = {"http://library.temple.edu/model#Building": {"id": 1, "img": "http://localhost/web_rdf/assets/icons/building.png", "r": 40},
+          "http://library.temple.edu/model#Space": {"id": 2, "img": "http://localhost/web_rdf/assets/icons/space.png", "r": 20},
+          "http://library.temple.edu/model#Group": {"id": 3, "img": "http://localhost/web_rdf/assets/icons/group.png", "r": 15},
+          "http://library.temple.edu/model#Person": {"id": 4, "img": "http://localhost/web_rdf/assets/icons/person.png", "r": 8},
+          "http://library.temple.edu/model#inSpace": {"id": 5, "img": "http://localhost/web_rdf/assets/icons/space.png", "r": 20},
+          "http://library.temple.edu/model#inGroup": {"id": 6, "img": "http://localhost/web_rdf/assets/icons/group.png", "r": 15},
+          "http://library.temple.edu/model#inBuilding": {"id": 7, "img": "http://localhost/web_rdf/assets/icons/building.png", "r": 40},
+          "http://library.temple.edu/model#Buildings": {"id": 8, "img": "http://localhost/web_rdf/assets/icons/buildings.png", "r": 40},
+          "http://library.temple.edu/model#Spaces": {"id": 9, "img": "http://localhost/web_rdf/assets/icons/spaces.png", "r": 20},
+          "http://library.temple.edu/model#Groups": {"id": 10, "img": "http://localhost/web_rdf/assets/icons/groups.png", "r": 15},
+          "http://library.temple.edu/model#Persons": {"id": 11, "img": "http://localhost/web_rdf/assets/icons/persons.png", "r": 8},
+          "http://library.temple.edu/model#inSystem": {"id": 12, "img": "http://localhost/web_rdf/assets/icons/tul.png", "r": 50},
+          "http://library.temple.edu/model#Service": {"id": 13, "img": "http://localhost/web_rdf/assets/icons/service.png", "r": 20},
+          "http://library.temple.edu/model#Services": {"id": 14, "img": "http://localhost/web_rdf/assets/icons/services.png", "r": 20},
+          "http://library.temple.edu/model#System": {"id": 15, "img": "http://localhost/web_rdf/assets/icons/system.png", "r": 50},
+          "http://library.temple.edu/model#Systems": {"id": 16, "img": "http://localhost/web_rdf/assets/icons/systems.png", "r": 50}
           }
 
 //
@@ -97,10 +97,10 @@ function update() {
         .enter().append("circle")
         .classed("inactive", true)
         .attr("r", function(d) { return d.radius; })
-        .style("fill", function(d) { if (d.active === 1) { console.log("active"); return color(d.cluster); } else { console.log("inactive"); return "#CCCCCC"; }})
+        .style("fill", function(d) { if (d.active === 1) { return color(d.cluster); } else { return "#CCCCCC"; }})
         .merge(circle)
             .attr("r", function(d) { return d.radius; })
-            .style("fill", function(d) { if (d.active === 1) { console.log("active"); return color(d.cluster); } else { console.log("inactive"); return "#CCCCCC"; }});
+            .style("fill", function(d) { if (d.active === 1) { return color(d.cluster); } else { return "#CCCCCC"; }});
 	icon = icon.data(nodes)
 	    .enter().append("svg:image")
             .attr("class", "icon")
@@ -135,7 +135,7 @@ function update() {
                 nodes[key].group = groups[nodes[key].type].id;
                 nodes[key].active = 1;
                 nodes[key].cluster = groups[nodes[key].type].id;
-                nodes[key].radius = 40;
+                nodes[key].radius = groups[nodes[key].type].r;
             }
 
             req = d3.request("http://45.33.93.64/blazegraph/sparql")
@@ -167,7 +167,7 @@ function update() {
                     //console.log(type);
 
                     i = groups[type].id;
-                    r = 20;
+                    r = groups[type].r;
 
                     new_nodes[id] = {
                         "id": id,
@@ -281,7 +281,7 @@ for (node in graph.nodes) {
     //r = Math.sqrt((i + 1) / m * -Math.log(Math.random())) * maxRadius;
     i = graph.nodes[node].group;
     //r = graph.nodes[node].group;
-    r = 20;
+    r = graph.nodes[node].r;
     //graph.nodes[node].cluster = i;
     //graph.nodes[node].radius = r;
     nodes = graph.nodes;
