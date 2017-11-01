@@ -14,22 +14,22 @@ var unique_nodes = [];
 var unique_links = [];
 
 //
-var groups = {"http://library.temple.edu/model#Building": {"id": 1, "img": "http://localhost/web_rdf/assets/icons/building.png"},
-          "http://library.temple.edu/model#Space": {"id": 2, "img": "http://localhost/web_rdf/assets/icons/space.png"},
-          "http://library.temple.edu/model#Group": {"id": 3, "img": "http://localhost/web_rdf/assets/icons/group.png"},
-          "http://library.temple.edu/model#Person": {"id": 4, "img": "http://localhost/web_rdf/assets/icons/person.png"},
-          "http://library.temple.edu/model#inSpace": {"id": 5, "img": "http://localhost/web_rdf/assets/icons/space.png"},
-          "http://library.temple.edu/model#inGroup": {"id": 6, "img": "http://localhost/web_rdf/assets/icons/group.png"},
-          "http://library.temple.edu/model#inBuilding": {"id": 7, "img": "http://localhost/web_rdf/assets/icons/building.png"},
-          "http://library.temple.edu/model#Buildings": {"id": 8, "img": "http://localhost/web_rdf/assets/icons/buildings.png"},
-          "http://library.temple.edu/model#Spaces": {"id": 9, "img": "http://localhost/web_rdf/assets/icons/spaces.png"},
-          "http://library.temple.edu/model#Groups": {"id": 10, "img": "http://localhost/web_rdf/assets/icons/groups.png"},
-          "http://library.temple.edu/model#Persons": {"id": 11, "img": "http://localhost/web_rdf/assets/icons/persons.png"},
-          "http://library.temple.edu/model#inSystem": {"id": 12, "img": "http://localhost/web_rdf/assets/icons/tul.png"},
-          "http://library.temple.edu/model#Service": {"id": 13, "img": "http://localhost/web_rdf/assets/icons/service.png"},
-          "http://library.temple.edu/model#Services": {"id": 14, "img": "http://localhost/web_rdf/assets/icons/services.png"},
-          "http://library.temple.edu/model#System": {"id": 15, "img": "http://localhost/web_rdf/assets/icons/system.png"},
-          "http://library.temple.edu/model#Systems": {"id": 16, "img": "http://localhost/web_rdf/assets/icons/systems.png"}
+var groups = {"http://library.temple.edu/model#Building": {"id": 1, "img": "assets/icons/building.png"},
+          "http://library.temple.edu/model#Space": {"id": 2, "img": "assets/icons/space.png"},
+          "http://library.temple.edu/model#Group": {"id": 3, "img": "assets/icons/group.png"},
+          "http://library.temple.edu/model#Person": {"id": 4, "img": "assets/icons/person.png"},
+          "http://library.temple.edu/model#inSpace": {"id": 5, "img": "assets/icons/space.png"},
+          "http://library.temple.edu/model#inGroup": {"id": 6, "img": "assets/icons/group.png"},
+          "http://library.temple.edu/model#inBuilding": {"id": 7, "img": "assets/icons/building.png"},
+          "http://library.temple.edu/model#Buildings": {"id": 8, "img": "assets/icons/buildings.png"},
+          "http://library.temple.edu/model#Spaces": {"id": 9, "img": "assets/icons/spaces.png"},
+          "http://library.temple.edu/model#Groups": {"id": 10, "img": "assets/icons/groups.png"},
+          "http://library.temple.edu/model#Persons": {"id": 11, "img": "assets/icons/persons.png"},
+          "http://library.temple.edu/model#inSystem": {"id": 12, "img": "assets/icons/tul.png"},
+          "http://library.temple.edu/model#Service": {"id": 13, "img": "assets/icons/service.png"},
+          "http://library.temple.edu/model#Services": {"id": 14, "img": "assets/icons/services.png"},
+          "http://library.temple.edu/model#System": {"id": 15, "img": "assets/icons/system.png"},
+          "http://library.temple.edu/model#Systems": {"id": 16, "img": "assets/icons/systems.png"}
           }
 
 var type_relationships = [];
@@ -510,7 +510,7 @@ d3.json("node_link_model.json", function(err, g) {
         {
             "id": "http://library.temple.edu/tul",
             "group": 12,
-            "img": "http://localhost/web_rdf/assets/icons/tul.png",
+            "img": "assets/icons/tul.png",
             "type": "http://library.temple.edu/model#System",
             "label": "Temple University Libraries",
             "entity": "node"

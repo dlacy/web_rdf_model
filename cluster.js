@@ -1,21 +1,21 @@
-var groups = {"http://library.temple.edu/model#Building": {"id": 1, "img": "http://localhost/web_rdf/assets/icons/building.png", "r": 40},
-          "http://library.temple.edu/model#Space": {"id": 2, "img": "http://localhost/web_rdf/assets/icons/space.png", "r": 20},
-          "http://library.temple.edu/model#Group": {"id": 3, "img": "http://localhost/web_rdf/assets/icons/group.png", "r": 15},
-          "http://library.temple.edu/model#Person": {"id": 4, "img": "http://localhost/web_rdf/assets/icons/person.png", "r": 8},
-          "http://library.temple.edu/model#inSpace": {"id": 5, "img": "http://localhost/web_rdf/assets/icons/space.png", "r": 20},
-          "http://library.temple.edu/model#inGroup": {"id": 6, "img": "http://localhost/web_rdf/assets/icons/group.png", "r": 15},
-          "http://library.temple.edu/model#inBuilding": {"id": 7, "img": "http://localhost/web_rdf/assets/icons/building.png", "r": 40},
-          "http://library.temple.edu/model#Buildings": {"id": 8, "img": "http://localhost/web_rdf/assets/icons/buildings.png", "r": 40},
-          "http://library.temple.edu/model#Spaces": {"id": 9, "img": "http://localhost/web_rdf/assets/icons/spaces.png", "r": 20},
-          "http://library.temple.edu/model#Groups": {"id": 10, "img": "http://localhost/web_rdf/assets/icons/groups.png", "r": 15},
-          "http://library.temple.edu/model#Persons": {"id": 11, "img": "http://localhost/web_rdf/assets/icons/persons.png", "r": 8},
-          "http://library.temple.edu/model#inSystem": {"id": 12, "img": "http://localhost/web_rdf/assets/icons/tul.png", "r": 50},
-          "http://library.temple.edu/model#Service": {"id": 13, "img": "http://localhost/web_rdf/assets/icons/service.png", "r": 20},
-          "http://library.temple.edu/model#Services": {"id": 14, "img": "http://localhost/web_rdf/assets/icons/services.png", "r": 20},
-          "http://library.temple.edu/model#System": {"id": 15, "img": "http://localhost/web_rdf/assets/icons/system.png", "r": 50},
-          "http://library.temple.edu/model#Systems": {"id": 16, "img": "http://localhost/web_rdf/assets/icons/systems.png", "r": 50}
+var groups = {"http://library.temple.edu/model#Building": {"id": 1, "img": "assets/icons/building.png", "r": 40},
+          "http://library.temple.edu/model#Space": {"id": 2, "img": "assets/icons/space.png", "r": 20},
+          "http://library.temple.edu/model#Group": {"id": 3, "img": "assets/icons/group.png", "r": 15},
+          "http://library.temple.edu/model#Person": {"id": 4, "img": "assets/icons/person.png", "r": 8},
+          "http://library.temple.edu/model#inSpace": {"id": 5, "img": "assets/icons/space.png", "r": 20},
+          "http://library.temple.edu/model#inGroup": {"id": 6, "img": "assets/icons/group.png", "r": 15},
+          "http://library.temple.edu/model#inBuilding": {"id": 7, "img": "assets/icons/building.png", "r": 40},
+          "http://library.temple.edu/model#Buildings": {"id": 8, "img": "assets/icons/buildings.png", "r": 40},
+          "http://library.temple.edu/model#Spaces": {"id": 9, "img": "assets/icons/spaces.png", "r": 20},
+          "http://library.temple.edu/model#Groups": {"id": 10, "img": "assets/icons/groups.png", "r": 15},
+          "http://library.temple.edu/model#Persons": {"id": 11, "img": "assets/icons/persons.png", "r": 8},
+          "http://library.temple.edu/model#inSystem": {"id": 12, "img": "assets/icons/tul.png", "r": 50},
+          "http://library.temple.edu/model#Service": {"id": 13, "img": "assets/icons/service.png", "r": 20},
+          "http://library.temple.edu/model#Services": {"id": 14, "img": "assets/icons/services.png", "r": 20},
+          "http://library.temple.edu/model#System": {"id": 15, "img": "assets/icons/system.png", "r": 50},
+          "http://library.temple.edu/model#Systems": {"id": 16, "img": "assets/icons/systems.png", "r": 50}
           }
-
+//http://localhost/web_rdf/
 //
 var getRelationships = function(uri) {
     query = `
@@ -47,6 +47,8 @@ var color = d3.scaleOrdinal(d3.schemeCategory10)
 
 // The largest node for each cluster.
 var clusters = new Array(m);
+
+
 
 /*
 var nodes = d3.range(n).map(function() {
@@ -80,9 +82,19 @@ var svg = d3.select("body").append("svg")
   .append('g')
     .attr('transform', 'translate(' + width / 2 + ',' + height / 2 + ')');
 
-var circle = svg.selectAll("circle");
-var icon = svg.selectAll("icon");
-var handle = svg.selectAll("handle");
+//add encompassing group for the zoom
+var g = svg.append("g")
+    .attr("class", "everything");
+
+//add zoom capabilities
+var zoom_handler = d3.zoom()
+    .on("zoom", zoom_actions);
+
+zoom_handler(svg);
+
+var circle = g.selectAll("circle");
+var icon = g.selectAll("icon");
+var handle = g.selectAll("handle");
 
 function update() {
 	// EXIT
@@ -234,6 +246,11 @@ function forceCluster(alpha) {
   }
 }
 
+//Zoom functions
+function zoom_actions(){
+    g.attr("transform", d3.event.transform)
+}
+
 function dragstarted(d) {
     if (!d3.event.active) simulation.alphaTarget(0.3).restart();
     d.fx = d.x;
@@ -256,7 +273,7 @@ graph = {
         {
             "id": "http://library.temple.edu/tul",
             "group": 0,
-            "img": "http://localhost/web_rdf/assets/icons/tul.png",
+            "img": "assets/icons/tul.png",
             "type": "http://library.temple.edu/model#System",
             "label": "Temple University Libraries",
             "entity": "node",

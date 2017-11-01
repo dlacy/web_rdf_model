@@ -44,7 +44,7 @@
 	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://library.temple.edu/model#Group> ;
 	<http://www.w3.org/2000/01/rdf-schema#label> "Special Collections Research Center"@en ;
 	<http://library.temple.edu/model#inSystem> <http://library.temple.edu/tul> ;
-	<http://library.temple.edu/model#inBuilding> <http://library.temple.edu/building/library_depository> .
+	<http://library.temple.edu/model#inBuilding> <http://library.temple.edu/building/paley> .
 
 <http://library.temple.edu/group/reference_and_instructional_services>
 	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://library.temple.edu/model#Group> ;
