@@ -134,7 +134,7 @@ function update() {
             if (d.link === "hard") {
                 return 1;
             } else {
-                return .1;
+                return .5;
             }
         })
 
