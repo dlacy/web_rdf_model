@@ -1,3 +1,4 @@
+Selects everything
 ```
 select ?s ?p ?o
 where
@@ -6,6 +7,7 @@ where
   }
 ```
 
+Select everything in `http://library.temple.edu/system/tul` (which should be everything)
 ```
 select ?s ?p ?o
 where
@@ -15,6 +17,7 @@ where
   }
 ```
 
+Select all statements associated with a staff member (Person)
 ```
 select ?p ?o
 where
@@ -23,6 +26,7 @@ where
   }
 ```
 
+Select the `tul:type`'s (Classes) associated with a staff member
 ```
 select ?type ?o
 where
@@ -32,6 +36,7 @@ where
   }
 ```
 
+Select all statements associated with a given building
 ```
 select ?p ?o
 where
@@ -41,6 +46,7 @@ where
   }
 ```
 
+Select the unique `tul:type`'s (Classes) associated with a given building
 ```
 select DISTINCT ?type
 where
