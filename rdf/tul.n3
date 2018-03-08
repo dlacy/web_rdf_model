@@ -123,6 +123,401 @@
      <http://library.temple.edu/model/Group>;
    <http://www.w3.org/2006/vcard/ns#url> "https://library.temple.edu/about/committees/working-groups" .
 
+<http://library.temple.edu/service/borrowing> a <http://schema.org/Service>;
+   <http://www.w3.org/2000/01/rdf-schema#label> "Borrow & Renew";
+   <http://library.temple.edu/model#inEntity> <http://library.temple.edu/system/tul>;
+   <http://library.temple.edu/model#type> <http://library.temple.edu/model/Service#Borrowing>,
+     <http://library.temple.edu/model/Service>;
+   <http://www.w3.org/2006/vcard/ns#url> "https://library.temple.edu/services/borrowing" .
+
+<http://library.temple.edu/service/borrowing10> a <http://schema.org/Service>;
+   <http://www.w3.org/2000/01/rdf-schema#label> "Policy Update: Lost, Long Overdue and Damaged Books";
+   <http://library.temple.edu/model#inEntity> <http://library.temple.edu/system/tul>;
+   <http://library.temple.edu/model#type> <http://library.temple.edu/model/Service#Borrowing>,
+     <http://library.temple.edu/model/Service>;
+   <http://www.w3.org/2006/vcard/ns#url> "https://sites.temple.edu/librarynews/2015/12/08/policy-update-lost-long-overdue-and-damaged-books/" .
+
+<http://library.temple.edu/service/borrowing11> a <http://schema.org/Service>;
+   <http://www.w3.org/2000/01/rdf-schema#label> "How Can I Renew My Books That Are Almost Due?";
+   <http://library.temple.edu/model#inEntity> <http://library.temple.edu/system/tul>;
+   <http://library.temple.edu/model#type> <http://library.temple.edu/model/Service#Borrowing>,
+     <http://library.temple.edu/model/Service>;
+   <http://www.w3.org/2006/vcard/ns#url> "https://sites.temple.edu/librarysuggestions/2009/04/07/i_checked_out_a_book/" .
+
+<http://library.temple.edu/service/borrowing12> a <http://schema.org/Service>;
+   <http://www.w3.org/2000/01/rdf-schema#label> "How About Adding Video Games We Can Borrow?";
+   <http://library.temple.edu/model#inEntity> <http://library.temple.edu/system/tul>;
+   <http://library.temple.edu/model#type> <http://library.temple.edu/model/Service#Borrowing>,
+     <http://library.temple.edu/model/Service>;
+   <http://www.w3.org/2006/vcard/ns#url> "https://sites.temple.edu/librarysuggestions/2015/04/30/how-about-adding-video-games-we-can-borrow/" .
+
+<http://library.temple.edu/service/borrowing13> a <http://schema.org/Service>;
+   <http://www.w3.org/2000/01/rdf-schema#label> "Alumni Borrowing Privileges Application";
+   <http://library.temple.edu/model#inEntity> <http://library.temple.edu/system/tul>;
+   <http://library.temple.edu/model#type> <http://library.temple.edu/model/Service#Borrowing>,
+     <http://library.temple.edu/model/Service>;
+   <http://www.w3.org/2006/vcard/ns#url> "https://library.temple.edu/services/forms/alumni-borrowing" .
+
+<http://library.temple.edu/service/borrowing14> a <http://schema.org/Service>;
+   <http://www.w3.org/2000/01/rdf-schema#label> "Borrowing Books, CDs, Videos, DVDs, etc";
+   <http://library.temple.edu/model#inEntity> <http://library.temple.edu/system/tul>;
+   <http://library.temple.edu/model#type> <http://library.temple.edu/model/Service#Borrowing>,
+     <http://library.temple.edu/model/Service>;
+   <http://www.w3.org/2006/vcard/ns#url> "https://library.temple.edu/about/policies/borrowing-books-cds-videos" .
+
+<http://library.temple.edu/service/borrowing2> a <http://schema.org/Service>;
+   <http://www.w3.org/2000/01/rdf-schema#label> "Library Borrowing Privileges for Departmental Guests, Visiting Scholars, Interns, Non-registered students, etc.";
+   <http://library.temple.edu/model#inEntity> <http://library.temple.edu/system/tul>;
+   <http://library.temple.edu/model#type> <http://library.temple.edu/model/Service#Borrowing>,
+     <http://library.temple.edu/model/Service>;
+   <http://www.w3.org/2006/vcard/ns#url> "https://library.temple.edu/services/forms/visiting-privileges" .
+
+<http://library.temple.edu/service/borrowing3> a <http://schema.org/Service>;
+   <http://www.w3.org/2000/01/rdf-schema#label> "Request Recall of Books Already Checked Out (Faculty/Library Staff Only)";
+   <http://library.temple.edu/model#inEntity> <http://library.temple.edu/system/tul>;
+   <http://library.temple.edu/model#type> <http://library.temple.edu/model/Service#Borrowing>,
+     <http://library.temple.edu/model/Service>;
+   <http://www.w3.org/2006/vcard/ns#url> "https://library.temple.edu/services/forms/recall" .
+
+<http://library.temple.edu/service/borrowing4> a <http://schema.org/Service>;
+   <http://www.w3.org/2000/01/rdf-schema#label> "Temple-Owned Materials";
+   <http://library.temple.edu/model#inEntity> <http://library.temple.edu/system/tul>;
+   <http://library.temple.edu/model#type> <http://library.temple.edu/model/Service#Borrowing>,
+     <http://library.temple.edu/model/Service>;
+   <http://www.w3.org/2006/vcard/ns#url> "https://library.temple.edu/form-type/temple-owned-materials" .
+
+<http://library.temple.edu/service/borrowing5> a <http://schema.org/Service>;
+   <http://www.w3.org/2000/01/rdf-schema#label> "Library Services and Policies for Visitors and Community Guests";
+   <http://library.temple.edu/model#inEntity> <http://library.temple.edu/system/tul>;
+   <http://library.temple.edu/model#type> <http://library.temple.edu/model/Service#Borrowing>,
+     <http://library.temple.edu/model/Service>;
+   <http://www.w3.org/2006/vcard/ns#url> "https://library.temple.edu/services/community" .
+
+<http://library.temple.edu/service/borrowing6> a <http://schema.org/Service>;
+   <http://www.w3.org/2000/01/rdf-schema#label> "Partners Borrowing Privileges Application/Renewal";
+   <http://library.temple.edu/model#inEntity> <http://library.temple.edu/system/tul>;
+   <http://library.temple.edu/model#type> <http://library.temple.edu/model/Service#Borrowing>,
+     <http://library.temple.edu/model/Service>;
+   <http://www.w3.org/2006/vcard/ns#url> "https://library.temple.edu/services/forms/partners-borrowing" .
+
+<http://library.temple.edu/service/borrowing7> a <http://schema.org/Service>;
+   <http://www.w3.org/2000/01/rdf-schema#label> "Loan of Non-Circulating Materials";
+   <http://library.temple.edu/model#inEntity> <http://library.temple.edu/system/tul>;
+   <http://library.temple.edu/model#type> <http://library.temple.edu/model/Service#Borrowing>,
+     <http://library.temple.edu/model/Service>;
+   <http://www.w3.org/2006/vcard/ns#url> "https://library.temple.edu/services/forms/staff/non-circulating-materials" .
+
+<http://library.temple.edu/service/borrowing8> a <http://schema.org/Service>;
+   <http://www.w3.org/2000/01/rdf-schema#label> "How Do I Recommend an Item for Purchase";
+   <http://library.temple.edu/model#inEntity> <http://library.temple.edu/system/tul>;
+   <http://library.temple.edu/model#type> <http://library.temple.edu/model/Service#Borrowing>,
+     <http://library.temple.edu/model/Service>;
+   <http://www.w3.org/2006/vcard/ns#url> "http://guides.temple.edu/c.php?g=78244" .
+
+<http://library.temple.edu/service/borrowing9> a <http://schema.org/Service>;
+   <http://www.w3.org/2000/01/rdf-schema#label> "Returning Items";
+   <http://library.temple.edu/model#inEntity> <http://library.temple.edu/system/tul>;
+   <http://library.temple.edu/model#type> <http://library.temple.edu/model/Service#Borrowing>,
+     <http://library.temple.edu/model/Service>;
+   <http://www.w3.org/2006/vcard/ns#url> "https://library.temple.edu/services/returning-items" .
+
+<http://library.temple.edu/service/carrel_request> a <http://schema.org/Service>;
+   <http://www.w3.org/2000/01/rdf-schema#label> "Paley Library Study Carrel Request";
+   <http://library.temple.edu/model#inEntity> <http://library.temple.edu/system/tul>;
+   <http://library.temple.edu/model#type> <http://library.temple.edu/model/Service#RoomReservation>,
+     <http://library.temple.edu/model/Service>;
+   <http://www.w3.org/2006/vcard/ns#url> "https://library.temple.edu/services/forms/study-carrel-request" .
+
+<http://library.temple.edu/service/carrel_request2> a <http://schema.org/Service>;
+   <http://www.w3.org/2000/01/rdf-schema#label> "Graduate Study Carrels";
+   <http://library.temple.edu/model#inEntity> <http://library.temple.edu/system/tul>;
+   <http://library.temple.edu/model#type> <http://library.temple.edu/model/Service#RoomReservation>,
+     <http://library.temple.edu/model/Service>;
+   <http://www.w3.org/2006/vcard/ns#url> "https://library.temple.edu/services/graduate/carrels" .
+
+<http://library.temple.edu/service/consortial_borrowing1> a <http://schema.org/Service>;
+   <http://www.w3.org/2000/01/rdf-schema#label> "Document Delivery";
+   <http://library.temple.edu/model#inEntity> <http://library.temple.edu/system/tul>;
+   <http://library.temple.edu/model#type> <http://library.temple.edu/model/Service#ConsortialBorrowing>,
+     <http://library.temple.edu/model/Service>;
+   <http://www.w3.org/2006/vcard/ns#url> "https://library.temple.edu/services/faculty/docdelivery" .
+
+<http://library.temple.edu/service/consortial_borrowing2> a <http://schema.org/Service>;
+   <http://www.w3.org/2000/01/rdf-schema#label> "Other Catalogs";
+   <http://library.temple.edu/model#inEntity> <http://library.temple.edu/system/tul>;
+   <http://library.temple.edu/model#type> <http://library.temple.edu/model/Service#ConsortialBorrowing>,
+     <http://library.temple.edu/model/Service>;
+   <http://www.w3.org/2006/vcard/ns#url> "https://library.temple.edu/other-catalogs" .
+
+<http://library.temple.edu/service/consortial_borrowing3> a <http://schema.org/Service>;
+   <http://www.w3.org/2000/01/rdf-schema#label> "Interlibrary Loan (ILLiad)";
+   <http://library.temple.edu/model#inEntity> <http://library.temple.edu/system/tul>;
+   <http://library.temple.edu/model#type> <http://library.temple.edu/model/Service#ConsortialBorrowing>,
+     <http://library.temple.edu/model/Service>;
+   <http://www.w3.org/2006/vcard/ns#url> "https://library.temple.edu/services/ill" .
+
+<http://library.temple.edu/service/consortial_borrowing4> a <http://schema.org/Service>;
+   <http://www.w3.org/2000/01/rdf-schema#label> "expedited-requests";
+   <http://library.temple.edu/model#inEntity> <http://library.temple.edu/system/tul>;
+   <http://library.temple.edu/model#type> <http://library.temple.edu/model/Service#ConsortialBorrowing>,
+     <http://library.temple.edu/model/Service>;
+   <http://www.w3.org/2006/vcard/ns#url> "https://library.temple.edu/services/ill/expedited-requests" .
+
+<http://library.temple.edu/service/consortial_borrowing5> a <http://schema.org/Service>;
+   <http://www.w3.org/2000/01/rdf-schema#label> "Loan period for E-ZBorrow books extended";
+   <http://library.temple.edu/model#inEntity> <http://library.temple.edu/system/tul>;
+   <http://library.temple.edu/model#type> <http://library.temple.edu/model/Service#ConsortialBorrowing>,
+     <http://library.temple.edu/model/Service>;
+   <http://www.w3.org/2006/vcard/ns#url> "https://sites.temple.edu/librarynews/2012/07/13/loan-period-for-e-zborrow-books-extended/" .
+
+<http://library.temple.edu/service/consortial_borrowing6> a <http://schema.org/Service>;
+   <http://www.w3.org/2000/01/rdf-schema#label> "expedited-requests";
+   <http://library.temple.edu/model#inEntity> <http://library.temple.edu/system/tul>;
+   <http://library.temple.edu/model#type> <http://library.temple.edu/model/Service#ConsortialBorrowing>,
+     <http://library.temple.edu/model/Service>;
+   <http://www.w3.org/2006/vcard/ns#url> "https://library.temple.edu/services/ill/expedited-requests" .
+
+<http://library.temple.edu/service/consortial_borrowing7> a <http://schema.org/Service>;
+   <http://www.w3.org/2000/01/rdf-schema#label> "Notificaiton and Pickup";
+   <http://library.temple.edu/model#inEntity> <http://library.temple.edu/system/tul>;
+   <http://library.temple.edu/model#type> <http://library.temple.edu/model/Service#ConsortialBorrowing>,
+     <http://library.temple.edu/model/Service>;
+   <http://www.w3.org/2006/vcard/ns#url> "https://library.temple.edu/services/ill/notification" .
+
+<http://library.temple.edu/service/contact> a <http://schema.org/Service>;
+   <http://www.w3.org/2000/01/rdf-schema#label> "Ask/Help";
+   <http://library.temple.edu/model#inEntity> <http://library.temple.edu/system/tul>;
+   <http://library.temple.edu/model#type> <http://library.temple.edu/model/Service#ResearchSupport>,
+     <http://library.temple.edu/model/Service>;
+   <http://www.w3.org/2006/vcard/ns#url> "http://guides.temple.edu/c.php?g=274870",
+     "https://sites.temple.edu/librarynews/2010/01/11/text_us_ask_a_l/",
+     "https://library.temple.edu/help" .
+
+<http://library.temple.edu/service/etd> a <http://schema.org/Service>;
+   <http://www.w3.org/2000/01/rdf-schema#label> "Electronic Theses and Dissertations FAQ";
+   <http://library.temple.edu/model#inEntity> <http://library.temple.edu/system/tul>;
+   <http://library.temple.edu/model#type> <http://library.temple.edu/model/Service>,
+     <http://library.temple.edu/model/Service#Scholar>;
+   <http://www.w3.org/2006/vcard/ns#url> "https://library.temple.edu/digitalcollections/etd-faq" .
+
+<http://library.temple.edu/service/faculty_literacy1> a <http://schema.org/Service>;
+   <http://www.w3.org/2000/01/rdf-schema#label> "Information Literacy at Temple University Libraries";
+   <http://library.temple.edu/model#inEntity> <http://library.temple.edu/system/tul>;
+   <http://library.temple.edu/model#type> <http://library.temple.edu/model/Service#Faculty>,
+     <http://library.temple.edu/model/Service>;
+   <http://www.w3.org/2006/vcard/ns#url> "https://library.temple.edu/services/faculty/infolit" .
+
+<http://library.temple.edu/service/faculty_literacy2> a <http://schema.org/Service>;
+   <http://www.w3.org/2000/01/rdf-schema#label> "Information Literacy at Temple University Libraries";
+   <http://library.temple.edu/model#inEntity> <http://library.temple.edu/system/tul>;
+   <http://library.temple.edu/model#type> <http://library.temple.edu/model/Service#Faculty>,
+     <http://library.temple.edu/model/Service>;
+   <http://www.w3.org/2006/vcard/ns#url> "https://library.temple.edu/services/faculty/infolit/more" .
+
+<http://library.temple.edu/service/instruction1> a <http://schema.org/Service>;
+   <http://www.w3.org/2000/01/rdf-schema#label> "Request a Library Instruction Session";
+   <http://library.temple.edu/model#inEntity> <http://library.temple.edu/system/tul>;
+   <http://library.temple.edu/model#type> <http://library.temple.edu/model/Service>,
+     <http://library.temple.edu/model/Service#Instruction>;
+   <http://www.w3.org/2006/vcard/ns#url> "https://library.temple.edu/services/forms/library-instruction" .
+
+<http://library.temple.edu/service/instruction2> a <http://schema.org/Service>;
+   <http://www.w3.org/2000/01/rdf-schema#label> "Scheduling an Instruction Session";
+   <http://library.temple.edu/model#inEntity> <http://library.temple.edu/system/tul>;
+   <http://library.temple.edu/model#type> <http://library.temple.edu/model/Service>,
+     <http://library.temple.edu/model/Service#Instruction>;
+   <http://www.w3.org/2006/vcard/ns#url> "https://library.temple.edu/services/library-instruction/scheduling" .
+
+<http://library.temple.edu/service/instruction3> a <http://schema.org/Service>;
+   <http://www.w3.org/2000/01/rdf-schema#label> "Request Forms";
+   <http://library.temple.edu/model#inEntity> <http://library.temple.edu/system/tul>;
+   <http://library.temple.edu/model#type> <http://library.temple.edu/model/Service>,
+     <http://library.temple.edu/model/Service#Instruction>;
+   <http://www.w3.org/2006/vcard/ns#url> "https://library.temple.edu/services/forms/instructional-services" .
+
+<http://library.temple.edu/service/instruction4> a <http://schema.org/Service>;
+   <http://www.w3.org/2000/01/rdf-schema#label> "HSL Request Instruction form";
+   <http://library.temple.edu/model#inEntity> <http://library.temple.edu/system/tul>;
+   <http://library.temple.edu/model#type> <http://library.temple.edu/model/Service>,
+     <http://library.temple.edu/model/Service#Instruction>;
+   <http://www.w3.org/2006/vcard/ns#url> "https://library.temple.edu/hsl/services/instruction" .
+
+<http://library.temple.edu/service/instruction5> a <http://schema.org/Service>;
+   <http://www.w3.org/2000/01/rdf-schema#label> "Library Instruction";
+   <http://library.temple.edu/model#inEntity> <http://library.temple.edu/system/tul>;
+   <http://library.temple.edu/model#type> <http://library.temple.edu/model/Service>,
+     <http://library.temple.edu/model/Service#Instruction>;
+   <http://www.w3.org/2006/vcard/ns#url> "https://library.temple.edu/services/library-instruction" .
+
+<http://library.temple.edu/service/literacy> a <http://schema.org/Service>;
+   <http://www.w3.org/2000/01/rdf-schema#label> "Spring 2009 GenEd Quantitative Literacy and Science &amp; Technology courses";
+   <http://library.temple.edu/model#inEntity> <http://library.temple.edu/system/tul>;
+   <http://library.temple.edu/model#type> <http://library.temple.edu/model/Service#ResearchSupport>,
+     <http://library.temple.edu/model/Service>;
+   <http://www.w3.org/2006/vcard/ns#url> "https://sites.temple.edu/selresearch/2009/01/08/spring_2009_gened_quantitative/" .
+
+<http://library.temple.edu/service/missing_books> a <http://schema.org/Service>;
+   <http://www.w3.org/2000/01/rdf-schema#label> "Missing Book Search Request";
+   <http://library.temple.edu/model#inEntity> <http://library.temple.edu/system/tul>;
+   <http://library.temple.edu/model#type> <http://library.temple.edu/model/Service#Borrowing>,
+     <http://library.temple.edu/model/Service>;
+   <http://www.w3.org/2006/vcard/ns#url> "https://library.temple.edu/services/forms/search-request" .
+
+<http://library.temple.edu/service/printing1> a <http://schema.org/Service>;
+   <http://www.w3.org/2000/01/rdf-schema#label> "Newer, Faster, Bigger Printer!!";
+   <http://library.temple.edu/model#inEntity> <http://library.temple.edu/system/tul>;
+   <http://library.temple.edu/model#type> <http://library.temple.edu/model/Service#Printing>,
+     <http://library.temple.edu/model/Service>;
+   <http://www.w3.org/2006/vcard/ns#url> "https://sites.temple.edu/owltech/newer-faster-bigger-printer/" .
+
+<http://library.temple.edu/service/printing3> a <http://schema.org/Service>;
+   <http://www.w3.org/2000/01/rdf-schema#label> "Print or Photocopy";
+   <http://library.temple.edu/model#inEntity> <http://library.temple.edu/system/tul>;
+   <http://library.temple.edu/model#type> <http://library.temple.edu/model/Service#Printing>,
+     <http://library.temple.edu/model/Service>;
+   <http://www.w3.org/2006/vcard/ns#url> "http://guides.temple.edu/c.php?g=78242" .
+
+<http://library.temple.edu/service/printing4> a <http://schema.org/Service>;
+   <http://www.w3.org/2000/01/rdf-schema#label> "Tech issues in the Library? Get help from one of our student Tech Assistants";
+   <http://library.temple.edu/model#inEntity> <http://library.temple.edu/system/tul>;
+   <http://library.temple.edu/model#type> <http://library.temple.edu/model/Service#Printing>,
+     <http://library.temple.edu/model/Service>;
+   <http://www.w3.org/2006/vcard/ns#url> "https://sites.temple.edu/librarynews/2013/02/27/tech-issues-in-the-library-get-help-from-one-of-our-student-tech-assistants/" .
+
+<http://library.temple.edu/service/printing5> a <http://schema.org/Service>;
+   <http://www.w3.org/2000/01/rdf-schema#label> "Use Library Technology and Computing Resources";
+   <http://library.temple.edu/model#inEntity> <http://library.temple.edu/system/tul>;
+   <http://library.temple.edu/model#type> <http://library.temple.edu/model/Service#Printing>,
+     <http://library.temple.edu/model/Service>;
+   <http://www.w3.org/2006/vcard/ns#url> "http://guides.temple.edu/c.php?g=78036" .
+
+<http://library.temple.edu/service/reference_and_instruction> a <http://schema.org/Service>;
+   <http://www.w3.org/2000/01/rdf-schema#label> "Reference and Instructional Services at Temple University Libraries";
+   <http://library.temple.edu/model#inEntity> <http://library.temple.edu/system/tul>;
+   <http://library.temple.edu/model#type> <http://library.temple.edu/model/Service#ResearchSupport>,
+     <http://library.temple.edu/model/Service>;
+   <http://www.w3.org/2006/vcard/ns#url> "http://guides.temple.edu/c.php?g=672090" .
+
+<http://library.temple.edu/service/reserves1> a <http://schema.org/Service>;
+   <http://www.w3.org/2000/01/rdf-schema#label> "Reserve Locations & Contact";
+   <http://library.temple.edu/model#inEntity> <http://library.temple.edu/system/tul>;
+   <http://library.temple.edu/model#type> <http://library.temple.edu/model/Service#Reserves>,
+     <http://library.temple.edu/model/Service>;
+   <http://www.w3.org/2006/vcard/ns#url> "https://library.temple.edu/services/reserves/faculty/contacts" .
+
+<http://library.temple.edu/service/reserves2> a <http://schema.org/Service>;
+   <http://www.w3.org/2000/01/rdf-schema#label> "Faculty Course Reserve Services";
+   <http://library.temple.edu/model#inEntity> <http://library.temple.edu/system/tul>;
+   <http://library.temple.edu/model#type> <http://library.temple.edu/model/Service#Reserves>,
+     <http://library.temple.edu/model/Service>;
+   <http://www.w3.org/2006/vcard/ns#url> "https://library.temple.edu/services/reserves/faculty" .
+
+<http://library.temple.edu/service/reserves3> a <http://schema.org/Service>;
+   <http://www.w3.org/2000/01/rdf-schema#label> "Course Reserves";
+   <http://library.temple.edu/model#inEntity> <http://library.temple.edu/system/tul>;
+   <http://library.temple.edu/model#type> <http://library.temple.edu/model/Service#Reserves>,
+     <http://library.temple.edu/model/Service>;
+   <http://www.w3.org/2006/vcard/ns#url> "https://library.temple.edu/services/course-reserves" .
+
+<http://library.temple.edu/service/reserves4> a <http://schema.org/Service>;
+   <http://www.w3.org/2000/01/rdf-schema#label> "Request book(s) for reserve-Ginsburg Health Sciences Library";
+   <http://library.temple.edu/model#inEntity> <http://library.temple.edu/system/tul>;
+   <http://library.temple.edu/model#type> <http://library.temple.edu/model/Service#Reserves>,
+     <http://library.temple.edu/model/Service>;
+   <http://www.w3.org/2006/vcard/ns#url> "https://library.temple.edu/hsl/services/reserves" .
+
+<http://library.temple.edu/service/reserves5> a <http://schema.org/Service>;
+   <http://www.w3.org/2000/01/rdf-schema#label> "Overdue Fines";
+   <http://library.temple.edu/model#inEntity> <http://library.temple.edu/system/tul>;
+   <http://library.temple.edu/model#type> <http://library.temple.edu/model/Service#Reserves>,
+     <http://library.temple.edu/model/Service>;
+   <http://www.w3.org/2006/vcard/ns#url> "https://library.temple.edu/services/reserves/fines" .
+
+<http://library.temple.edu/service/reserves6> a <http://schema.org/Service>;
+   <http://www.w3.org/2000/01/rdf-schema#label> "New Reserve Policy";
+   <http://library.temple.edu/model#inEntity> <http://library.temple.edu/system/tul>;
+   <http://library.temple.edu/model#type> <http://library.temple.edu/model/Service#Reserves>,
+     <http://library.temple.edu/model/Service>;
+   <http://www.w3.org/2006/vcard/ns#url> "https://sites.temple.edu/librarynews/2006/01/11/new_reserves_po/" .
+
+<http://library.temple.edu/service/reserves7> a <http://schema.org/Service>;
+   <http://www.w3.org/2000/01/rdf-schema#label> "New Reserve Policy";
+   <http://library.temple.edu/model#inEntity> <http://library.temple.edu/system/tul>;
+   <http://library.temple.edu/model#type> <http://library.temple.edu/model/Service#Reserves>,
+     <http://library.temple.edu/model/Service>;
+   <http://www.w3.org/2006/vcard/ns#url> "https://sites.temple.edu/historynews/2006/01/11/new_reserves_po/" .
+
+<http://library.temple.edu/service/room_reservation2> a <http://schema.org/Service>;
+   <http://www.w3.org/2000/01/rdf-schema#label> "Meeting Room Guidelines";
+   <http://library.temple.edu/model#inEntity> <http://library.temple.edu/system/tul>;
+   <http://library.temple.edu/model#type> <http://library.temple.edu/model/Service#RoomReservation>,
+     <http://library.temple.edu/model/Service>;
+   <http://www.w3.org/2006/vcard/ns#url> "https://library.temple.edu/about/policies/meeting-room-guidelines" .
+
+<http://library.temple.edu/service/room_reservation3> a <http://schema.org/Service>;
+   <http://www.w3.org/2000/01/rdf-schema#label> "Study Rooms Need New Chalkboards";
+   <http://library.temple.edu/model#inEntity> <http://library.temple.edu/system/tul>;
+   <http://library.temple.edu/model#type> <http://library.temple.edu/model/Service#RoomReservation>,
+     <http://library.temple.edu/model/Service>;
+   <http://www.w3.org/2006/vcard/ns#url> "https://sites.temple.edu/librarysuggestions/2009/12/15/study_rooms_need_new_chalkboar/" .
+
+<http://library.temple.edu/service/scholar1> a <http://schema.org/Service>;
+   <http://www.w3.org/2000/01/rdf-schema#label> "Research and Publishing Support for Authors";
+   <http://library.temple.edu/model#inEntity> <http://library.temple.edu/system/tul>;
+   <http://library.temple.edu/model#type> <http://library.temple.edu/model/Service>,
+     <http://library.temple.edu/model/Service#Scholar>;
+   <http://www.w3.org/2006/vcard/ns#url> "https://library.temple.edu/services/faculty/scholarly-communications/research-and-support" .
+
+<http://library.temple.edu/service/scholar2> a <http://schema.org/Service>;
+   <http://www.w3.org/2000/01/rdf-schema#label> "Temple University Libraries";
+   <http://library.temple.edu/model#inEntity> <http://library.temple.edu/system/tul>;
+   <http://library.temple.edu/model#type> <http://library.temple.edu/model/Service>,
+     <http://library.temple.edu/model/Service#Scholar>;
+   <http://www.w3.org/2006/vcard/ns#url> "https://library.temple.edu/researchdataservices" .
+
+<http://library.temple.edu/service/scholar3> a <http://schema.org/Service>;
+   <http://www.w3.org/2000/01/rdf-schema#label> "Scholarly Communications Services for Faculty, Researchers, and Graduate Students";
+   <http://library.temple.edu/model#inEntity> <http://library.temple.edu/system/tul>;
+   <http://library.temple.edu/model#type> <http://library.temple.edu/model/Service>,
+     <http://library.temple.edu/model/Service#Scholar>;
+   <http://www.w3.org/2006/vcard/ns#url> "https://library.temple.edu/about/publications/text/scholarly-communications-services" .
+
+<http://library.temple.edu/service/scholar4> a <http://schema.org/Service>;
+   <http://www.w3.org/2000/01/rdf-schema#label> "Scholarly Communication Issues";
+   <http://library.temple.edu/model#inEntity> <http://library.temple.edu/system/tul>;
+   <http://library.temple.edu/model#type> <http://library.temple.edu/model/Service>,
+     <http://library.temple.edu/model/Service#Scholar>;
+   <http://www.w3.org/2006/vcard/ns#url> "https://library.temple.edu/services/faculty/scholarly-communications/issues" .
+
+<http://library.temple.edu/service/scholar5> a <http://schema.org/Service>;
+   <http://www.w3.org/2000/01/rdf-schema#label> "Transforming Scholarly Communications";
+   <http://library.temple.edu/model#inEntity> <http://library.temple.edu/system/tul>;
+   <http://library.temple.edu/model#type> <http://library.temple.edu/model/Service>,
+     <http://library.temple.edu/model/Service#Scholar>;
+   <http://www.w3.org/2006/vcard/ns#url> "https://library.temple.edu/services/faculty/scholarly-communications" .
+
+<http://library.temple.edu/service/scholar6> a <http://schema.org/Service>;
+   <http://www.w3.org/2000/01/rdf-schema#label> "Scholarly Communication";
+   <http://library.temple.edu/model#inEntity> <http://library.temple.edu/system/tul>;
+   <http://library.temple.edu/model#type> <http://library.temple.edu/model/Service>,
+     <http://library.temple.edu/model/Service#Scholar>;
+   <http://www.w3.org/2006/vcard/ns#url> "https://library.temple.edu/services/faculty/scholarly-communication" .
+
+<http://library.temple.edu/service/virtual_reference> a <http://schema.org/Service>;
+   <http://www.w3.org/2000/01/rdf-schema#label> "Virtual Reference Services (Ask a Librarian) Privacy Guidelines";
+   <http://library.temple.edu/model#inEntity> <http://library.temple.edu/system/tul>;
+   <http://library.temple.edu/model#type> <http://library.temple.edu/model/Service#ResearchSupport>,
+     <http://library.temple.edu/model/Service>;
+   <http://www.w3.org/2006/vcard/ns#url> "https://library.temple.edu/about/policies/virtual-reference-services-ask" .
+
+<http://library.temple.edu/service/wifi> a <http://schema.org/Service>;
+   <http://www.w3.org/2000/01/rdf-schema#label> "eduroam wireless access";
+   <http://library.temple.edu/model#inEntity> <http://library.temple.edu/system/tul>;
+   <http://library.temple.edu/model#type> <http://library.temple.edu/model/Service#Wifi>,
+     <http://library.temple.edu/model/Service>;
+   <http://www.w3.org/2006/vcard/ns#url> "https://sites.temple.edu/owltech/how-do-i-connect-to-tusecurewireless-in-the-library/",
+     "https://library.temple.edu/services/community/eduroam" .
+
 <http://library.temple.edu/building/anderson> a <http://schema.org/Place>;
    <http://www.w3.org/2000/01/rdf-schema#label> "Anderson Hall";
    <http://library.temple.edu/model#hasEntity> <http://library.temple.edu/space/cla_ed_center>;
@@ -157,6 +552,29 @@
      <http://library.temple.edu/model/Group>;
    <http://www.w3.org/2006/vcard/ns#url> "https://library.temple.edu/services/faculty/scholarly-communications/committee" .
 
+<http://library.temple.edu/service/paley_study_rooms> a <http://schema.org/Service>;
+   <http://www.w3.org/2000/01/rdf-schema#label> "Study Room Reservations - Paley";
+   <http://library.temple.edu/model#inEntity> <http://library.temple.edu/building/paley>,
+     <http://library.temple.edu/system/tul>;
+   <http://library.temple.edu/model#type> <http://library.temple.edu/model/Service#RoomReservation>,
+     <http://library.temple.edu/model/Service> .
+
+<http://library.temple.edu/service/room_reservation1> a <http://schema.org/Service>;
+   <http://www.w3.org/2000/01/rdf-schema#label> "Reserve a Study Room";
+   <http://library.temple.edu/model#inEntity> <http://library.temple.edu/building/paley>,
+     <http://library.temple.edu/system/tul>;
+   <http://library.temple.edu/model#type> <http://library.temple.edu/model/Service#RoomReservation>,
+     <http://library.temple.edu/model/Service>;
+   <http://www.w3.org/2006/vcard/ns#url> "https://library.temple.edu/services/forms/reserve-study-room" .
+
+<http://library.temple.edu/service/thinktank_contact> a <http://schema.org/Service>;
+   <http://www.w3.org/2000/01/rdf-schema#label> "Think Tank Service Desk - Referrals";
+   <http://library.temple.edu/model#inEntity> <http://library.temple.edu/building/paley>,
+     <http://library.temple.edu/system/tul>;
+   <http://library.temple.edu/model#type> <http://library.temple.edu/model/Service#ResearchSupport>,
+     <http://library.temple.edu/model/Service>;
+   <http://www.w3.org/2006/vcard/ns#url> "http://guides.temple.edu/c.php?g=602501" .
+
 <http://library.temple.edu/space/cla_ed_center> a <http://schema.org/Accommodation>;
    <http://www.w3.org/2000/01/rdf-schema#label> "CLA Educational Technology Center";
    <http://library.temple.edu/model#inEntity> <http://library.temple.edu/building/anderson>,
@@ -165,14 +583,6 @@
      <http://library.temple.edu/model/Space>;
    <http://www.w3.org/2006/vcard/ns#url> "https://library.temple.edu/about/locations/cla-educational-techn",
      "https://library.temple.edu/about/locations/cla-educational-techn/directions" .
-
-<http://library.temple.edu/space/hsl_innovation> a <http://schema.org/Accommodation>;
-   <http://www.w3.org/2000/01/rdf-schema#label> "Ginsburg Innovation Space";
-   <http://library.temple.edu/model#inEntity> <http://library.temple.edu/space/hsl>,
-     <http://library.temple.edu/system/tul>;
-   <http://library.temple.edu/model#type> <http://library.temple.edu/model/Space>,
-     <http://library.temple.edu/model/Space#Maker>;
-   <http://www.w3.org/2006/vcard/ns#url> "http://guides.temple.edu/c.php?g=627953" .
 
 <http://library.temple.edu/space/japan> a <http://schema.org/Accommodation>;
    <http://www.w3.org/2000/01/rdf-schema#label> "Japan Campus Library";
@@ -232,14 +642,6 @@
    <http://library.temple.edu/model#type> <http://library.temple.edu/model/Space#Study>,
      <http://library.temple.edu/model/Space>;
    <http://www.w3.org/2006/vcard/ns#url> "https://library.temple.edu/about/locations/scrc/directions" .
-
-<http://library.temple.edu/building/podiatry> a <http://schema.org/Place>;
-   <http://www.w3.org/2000/01/rdf-schema#label> "School of Podiatric Medicine";
-   <http://library.temple.edu/model#hasEntity> <http://library.temple.edu/person/gregory-laynor>,
-     <http://library.temple.edu/space/podiatry>;
-   <http://library.temple.edu/model#inEntity> <http://library.temple.edu/system/tul>;
-   <http://library.temple.edu/model#type> <http://library.temple.edu/model/Building>;
-   <http://www.w3.org/2006/vcard/ns#url> "https://library.temple.edu/about/locations/charles-e-krausz-libr" .
 
 <http://library.temple.edu/person/aaron-javsicas> a <http://schema.org/Person>;
    <http://www.w3.org/2000/01/rdf-schema#label> "Aaron  Javsicas";
@@ -1121,6 +1523,69 @@
    <http://library.temple.edu/model#type> <http://library.temple.edu/model/Person>;
    <http://www.w3.org/2006/vcard/ns#url> "https://library.temple.edu/about/staff/yelena-lidskaya" .
 
+<http://library.temple.edu/service/dsc_3d_printing> a <http://schema.org/Service>;
+   <http://www.w3.org/2000/01/rdf-schema#label> "DSC - 3D Printing Services";
+   <http://library.temple.edu/model#inEntity> <http://library.temple.edu/building/paley>,
+     <http://library.temple.edu/space/dsc>,
+     <http://library.temple.edu/system/tul>;
+   <http://library.temple.edu/model#type> <http://library.temple.edu/model/Service#Printing>,
+     <http://library.temple.edu/model/Service>;
+   <http://www.w3.org/2006/vcard/ns#url> "https://library.temple.edu/services/forms/3d-printing",
+     "https://sites.temple.edu/tudsc/2016/08/29/3d-printing-and-laser-cutting-now-available/" .
+
+<http://library.temple.edu/service/hsl_contact> a <http://schema.org/Service>;
+   <http://www.w3.org/2000/01/rdf-schema#label> "Request Consultation";
+   <http://library.temple.edu/model#inEntity> <http://library.temple.edu/space/hsl>,
+     <http://library.temple.edu/building/meded>,
+     <http://library.temple.edu/system/tul>;
+   <http://library.temple.edu/model#type> <http://library.temple.edu/model/Service#ResearchSupport>,
+     <http://library.temple.edu/model/Service>;
+   <http://www.w3.org/2006/vcard/ns#url> "https://library.temple.edu/hsl/services/consult" .
+
+<http://library.temple.edu/service/hsl_reference> a <http://schema.org/Service>;
+   <http://www.w3.org/2000/01/rdf-schema#label> "HSL Reference Services";
+   <http://library.temple.edu/model#inEntity> <http://library.temple.edu/space/hsl>,
+     <http://library.temple.edu/building/meded>,
+     <http://library.temple.edu/system/tul>;
+   <http://library.temple.edu/model#type> <http://library.temple.edu/model/Service#ResearchSupport>,
+     <http://library.temple.edu/model/Service>;
+   <http://www.w3.org/2006/vcard/ns#url> "https://library.temple.edu/hsl/services/reference" .
+
+<http://library.temple.edu/service/hsl_study_rooms> a <http://schema.org/Service>;
+   <http://www.w3.org/2000/01/rdf-schema#label> "Study Room Reservations - Ginsburg";
+   <http://library.temple.edu/model#inEntity> <http://library.temple.edu/space/hsl>,
+     <http://library.temple.edu/building/meded>,
+     <http://library.temple.edu/system/tul>;
+   <http://library.temple.edu/model#type> <http://library.temple.edu/model/Service#RoomReservation>,
+     <http://library.temple.edu/model/Service>;
+   <http://www.w3.org/2006/vcard/ns#url> "https://library.temple.edu/hsl/about/study-room-policy" .
+
+<http://library.temple.edu/service/podiatry_study_rooms> a <http://schema.org/Service>;
+   <http://www.w3.org/2000/01/rdf-schema#label> "Study Room Reservations - Podiatry";
+   <http://library.temple.edu/model#inEntity> <http://library.temple.edu/building/podiatry>,
+     <http://library.temple.edu/space/podiatry>,
+     <http://library.temple.edu/system/tul>;
+   <http://library.temple.edu/model#type> <http://library.temple.edu/model/Service#RoomReservation>,
+     <http://library.temple.edu/model/Service> .
+
+<http://library.temple.edu/service/printing2> a <http://schema.org/Service>;
+   <http://www.w3.org/2000/01/rdf-schema#label> "Print, Copy, Scan";
+   <http://library.temple.edu/model#inEntity> <http://library.temple.edu/space/hsl>,
+     <http://library.temple.edu/building/meded>,
+     <http://library.temple.edu/system/tul>;
+   <http://library.temple.edu/model#type> <http://library.temple.edu/model/Service#Printing>,
+     <http://library.temple.edu/model/Service>;
+   <http://www.w3.org/2006/vcard/ns#url> "https://library.temple.edu/hsl/services/printing" .
+
+<http://library.temple.edu/space/hsl_innovation> a <http://schema.org/Accommodation>;
+   <http://www.w3.org/2000/01/rdf-schema#label> "Ginsburg Innovation Space";
+   <http://library.temple.edu/model#hasEntity> <http://library.temple.edu/service/hsl_3d_printing>;
+   <http://library.temple.edu/model#inEntity> <http://library.temple.edu/space/hsl>,
+     <http://library.temple.edu/system/tul>;
+   <http://library.temple.edu/model#type> <http://library.temple.edu/model/Space>,
+     <http://library.temple.edu/model/Space#Maker>;
+   <http://www.w3.org/2006/vcard/ns#url> "http://guides.temple.edu/c.php?g=627953" .
+
 <http://library.temple.edu/space/paley_media> a <http://schema.org/Accommodation>;
    <http://www.w3.org/2000/01/rdf-schema#label> "Paley Media Services";
    <http://library.temple.edu/model#hasEntity> <http://library.temple.edu/space/paley_media_study>;
@@ -1130,15 +1595,6 @@
      <http://library.temple.edu/model/Space>;
    <http://www.w3.org/2006/vcard/ns#url> "https://library.temple.edu/collections/media" .
 
-<http://library.temple.edu/space/podiatry> a <http://schema.org/Accommodation>;
-   <http://www.w3.org/2000/01/rdf-schema#label> "Krausz Library of Podiatric Medicine";
-   <http://library.temple.edu/model#hasEntity> <http://library.temple.edu/person/gregory-laynor>;
-   <http://library.temple.edu/model#inEntity> <http://library.temple.edu/building/podiatry>,
-     <http://library.temple.edu/system/tul>;
-   <http://library.temple.edu/model#type> <http://library.temple.edu/model/Library>,
-     <http://library.temple.edu/model/Space>;
-   <http://www.w3.org/2006/vcard/ns#url> "https://library.temple.edu/about/locations/charles-e-krausz-libr" .
-
 <http://library.temple.edu/building/kardon> a <http://schema.org/Place>;
    <http://www.w3.org/2000/01/rdf-schema#label> "Kardon";
    <http://library.temple.edu/model#hasEntity> <http://library.temple.edu/person/jessica-hoffman>,
@@ -1146,6 +1602,15 @@
      <http://library.temple.edu/person/casey-babcock>;
    <http://library.temple.edu/model#inEntity> <http://library.temple.edu/system/tul>;
    <http://library.temple.edu/model#type> <http://library.temple.edu/model/Building> .
+
+<http://library.temple.edu/building/podiatry> a <http://schema.org/Place>;
+   <http://www.w3.org/2000/01/rdf-schema#label> "School of Podiatric Medicine";
+   <http://library.temple.edu/model#hasEntity> <http://library.temple.edu/person/gregory-laynor>,
+     <http://library.temple.edu/service/podiatry_study_rooms>,
+     <http://library.temple.edu/space/podiatry>;
+   <http://library.temple.edu/model#inEntity> <http://library.temple.edu/system/tul>;
+   <http://library.temple.edu/model#type> <http://library.temple.edu/model/Building>;
+   <http://www.w3.org/2006/vcard/ns#url> "https://library.temple.edu/about/locations/charles-e-krausz-libr" .
 
 <http://library.temple.edu/person/alberto-pagan-ramirez> a <http://schema.org/Person>;
    <http://www.w3.org/2000/01/rdf-schema#label> "Alberto Pagan Ramirez";
@@ -1561,6 +2026,27 @@
    <http://library.temple.edu/model#type> <http://library.temple.edu/model/Person>;
    <http://www.w3.org/2006/vcard/ns#url> "https://library.temple.edu/about/staff/tiffany-ellis" .
 
+<http://library.temple.edu/service/hsl_3d_printing> a <http://schema.org/Service>;
+   <http://www.w3.org/2000/01/rdf-schema#label> "HSL - 3D Printing Services ";
+   <http://library.temple.edu/model#inEntity> <http://library.temple.edu/space/hsl>,
+     <http://library.temple.edu/space/hsl_innovation>,
+     <http://library.temple.edu/building/meded>,
+     <http://library.temple.edu/system/tul>;
+   <http://library.temple.edu/model#type> <http://library.temple.edu/model/Service#Printing>,
+     <http://library.temple.edu/model/Service>;
+   <http://www.w3.org/2006/vcard/ns#url> "https://library.temple.edu/services/forms/3d-printing",
+     "http://guides.temple.edu/c.php?g=627967" .
+
+<http://library.temple.edu/space/podiatry> a <http://schema.org/Accommodation>;
+   <http://www.w3.org/2000/01/rdf-schema#label> "Krausz Library of Podiatric Medicine";
+   <http://library.temple.edu/model#hasEntity> <http://library.temple.edu/person/gregory-laynor>,
+     <http://library.temple.edu/service/podiatry_study_rooms>;
+   <http://library.temple.edu/model#inEntity> <http://library.temple.edu/building/podiatry>,
+     <http://library.temple.edu/system/tul>;
+   <http://library.temple.edu/model#type> <http://library.temple.edu/model/Library>,
+     <http://library.temple.edu/model/Space>;
+   <http://www.w3.org/2006/vcard/ns#url> "https://library.temple.edu/about/locations/charles-e-krausz-libr" .
+
 <http://library.temple.edu/group/lrs-steb> a <http://schema.org/Organization>;
    <http://www.w3.org/2000/01/rdf-schema#label> "LRS - Science, Technology, Engineering, and Biomedical";
    <http://library.temple.edu/model#hasEntity> <http://library.temple.edu/person/gretchen-sneff>,
@@ -1609,21 +2095,6 @@
    <http://library.temple.edu/model#type> <http://library.temple.edu/model/Group>,
      <http://library.temple.edu/model/Group#Department>;
    <http://www.w3.org/2006/vcard/ns#url> "https://library.temple.edu/dsc" .
-
-<http://library.temple.edu/space/dsc> a <http://schema.org/Accommodation>;
-   <http://www.w3.org/2000/01/rdf-schema#label> "Digital Scholarship Center";
-   <http://library.temple.edu/model#hasEntity> <http://library.temple.edu/person/h-alex-wermer-colan>,
-     <http://library.temple.edu/person/jordan-hample>,
-     <http://library.temple.edu/group/dsc>,
-     <http://library.temple.edu/person/jennifer-grayburn>,
-     <http://library.temple.edu/person/matthew-shoemaker>;
-   <http://library.temple.edu/model#inEntity> <http://library.temple.edu/building/paley>,
-     <http://library.temple.edu/system/tul>;
-   <http://library.temple.edu/model#type> <http://library.temple.edu/model/Library>,
-     <http://library.temple.edu/model/Space>,
-     <http://library.temple.edu/model/Space#Maker>;
-   <http://www.w3.org/2006/vcard/ns#url> "https://library.temple.edu/dsc",
-     "https://sites.temple.edu/tudsc/" .
 
 <http://library.temple.edu/building/ambler> a <http://schema.org/Place>;
    <http://www.w3.org/2000/01/rdf-schema#label> "Ambler Campus Library";
@@ -1718,6 +2189,22 @@
    <http://library.temple.edu/model#type> <http://library.temple.edu/model/Library>,
      <http://library.temple.edu/model/Space>;
    <http://www.w3.org/2006/vcard/ns#url> "https://library.temple.edu/about/publications/text/blockson" .
+
+<http://library.temple.edu/space/dsc> a <http://schema.org/Accommodation>;
+   <http://www.w3.org/2000/01/rdf-schema#label> "Digital Scholarship Center";
+   <http://library.temple.edu/model#hasEntity> <http://library.temple.edu/person/h-alex-wermer-colan>,
+     <http://library.temple.edu/person/jordan-hample>,
+     <http://library.temple.edu/group/dsc>,
+     <http://library.temple.edu/person/jennifer-grayburn>,
+     <http://library.temple.edu/person/matthew-shoemaker>,
+     <http://library.temple.edu/service/dsc_3d_printing>;
+   <http://library.temple.edu/model#inEntity> <http://library.temple.edu/building/paley>,
+     <http://library.temple.edu/system/tul>;
+   <http://library.temple.edu/model#type> <http://library.temple.edu/model/Library>,
+     <http://library.temple.edu/model/Space>,
+     <http://library.temple.edu/model/Space#Maker>;
+   <http://www.w3.org/2006/vcard/ns#url> "https://library.temple.edu/dsc",
+     "https://sites.temple.edu/tudsc/" .
 
 <http://library.temple.edu/space/law> a <http://schema.org/Accommodation>;
    <http://www.w3.org/2000/01/rdf-schema#label> "Law Library";
@@ -1945,34 +2432,6 @@
      <http://library.temple.edu/model/Group#Department>;
    <http://www.w3.org/2006/vcard/ns#url> "https://library.temple.edu/about/staff?f%5B0%5D=taxonomy_vocabulary_2%3A13" .
 
-<http://library.temple.edu/building/meded> a <http://schema.org/Place>;
-   <http://www.w3.org/2000/01/rdf-schema#label> "Medical Education and Research Building";
-   <http://library.temple.edu/model#hasEntity> <http://library.temple.edu/person/lauri-fennell>,
-     <http://library.temple.edu/person/derrick-d-russell>,
-     <http://library.temple.edu/person/patrick-lyons>,
-     <http://library.temple.edu/person/natalie-tagge>,
-     <http://library.temple.edu/person/jenny-pierce>,
-     <http://library.temple.edu/group/hsl>,
-     <http://library.temple.edu/person/jean-cottle>,
-     <http://library.temple.edu/person/barbara-kuchan>,
-     <http://library.temple.edu/person/stephanie-roth>,
-     <http://library.temple.edu/person/alberto-pagan-ramirez>,
-     <http://library.temple.edu/person/tiffany-ellis>,
-     <http://library.temple.edu/person/jennifer-sanchez>,
-     <http://library.temple.edu/person/justin-hercules>,
-     <http://library.temple.edu/person/gerard-mahlman>,
-     <http://library.temple.edu/person/royce-sargeant>,
-     <http://library.temple.edu/person/erica-howell>,
-     <http://library.temple.edu/person/kandy-dancy>,
-     <http://library.temple.edu/person/karen-burstein>,
-     <http://library.temple.edu/space/hsl>,
-     <http://library.temple.edu/person/mark-marchino>,
-     <http://library.temple.edu/person/christopher-denison>,
-     <http://library.temple.edu/person/linda-brick>;
-   <http://library.temple.edu/model#inEntity> <http://library.temple.edu/system/tul>;
-   <http://library.temple.edu/model#type> <http://library.temple.edu/model/Building>;
-   <http://www.w3.org/2006/vcard/ns#url> "https://library.temple.edu/hsl" .
-
 <http://library.temple.edu/group/hsl> a <http://schema.org/Organization>;
    <http://www.w3.org/2000/01/rdf-schema#label> "Health Sciences Library";
    <http://library.temple.edu/model#hasEntity> <http://library.temple.edu/person/lauri-fennell>,
@@ -2002,6 +2461,39 @@
      <http://library.temple.edu/model/Group#Department>;
    <http://www.w3.org/2006/vcard/ns#url> "https://library.temple.edu/about/staff?f%5B0%5D=taxonomy_vocabulary_2%3A11" .
 
+<http://library.temple.edu/building/meded> a <http://schema.org/Place>;
+   <http://www.w3.org/2000/01/rdf-schema#label> "Medical Education and Research Building";
+   <http://library.temple.edu/model#hasEntity> <http://library.temple.edu/person/lauri-fennell>,
+     <http://library.temple.edu/person/derrick-d-russell>,
+     <http://library.temple.edu/person/patrick-lyons>,
+     <http://library.temple.edu/person/natalie-tagge>,
+     <http://library.temple.edu/person/jenny-pierce>,
+     <http://library.temple.edu/group/hsl>,
+     <http://library.temple.edu/person/jean-cottle>,
+     <http://library.temple.edu/person/barbara-kuchan>,
+     <http://library.temple.edu/person/stephanie-roth>,
+     <http://library.temple.edu/person/alberto-pagan-ramirez>,
+     <http://library.temple.edu/service/printing2>,
+     <http://library.temple.edu/service/hsl_study_rooms>,
+     <http://library.temple.edu/person/tiffany-ellis>,
+     <http://library.temple.edu/service/hsl_contact>,
+     <http://library.temple.edu/person/jennifer-sanchez>,
+     <http://library.temple.edu/person/justin-hercules>,
+     <http://library.temple.edu/person/gerard-mahlman>,
+     <http://library.temple.edu/person/royce-sargeant>,
+     <http://library.temple.edu/service/hsl_reference>,
+     <http://library.temple.edu/person/erica-howell>,
+     <http://library.temple.edu/person/kandy-dancy>,
+     <http://library.temple.edu/service/hsl_3d_printing>,
+     <http://library.temple.edu/person/karen-burstein>,
+     <http://library.temple.edu/space/hsl>,
+     <http://library.temple.edu/person/mark-marchino>,
+     <http://library.temple.edu/person/christopher-denison>,
+     <http://library.temple.edu/person/linda-brick>;
+   <http://library.temple.edu/model#inEntity> <http://library.temple.edu/system/tul>;
+   <http://library.temple.edu/model#type> <http://library.temple.edu/model/Building>;
+   <http://www.w3.org/2006/vcard/ns#url> "https://library.temple.edu/hsl" .
+
 <http://library.temple.edu/space/hsl> a <http://schema.org/Accommodation>;
    <http://www.w3.org/2000/01/rdf-schema#label> "Simmy and Harry Ginsburg Health Sciences Library";
    <http://library.temple.edu/model#hasEntity> <http://library.temple.edu/person/lauri-fennell>,
@@ -2015,13 +2507,18 @@
      <http://library.temple.edu/person/stephanie-roth>,
      <http://library.temple.edu/space/hsl_innovation>,
      <http://library.temple.edu/person/alberto-pagan-ramirez>,
+     <http://library.temple.edu/service/printing2>,
+     <http://library.temple.edu/service/hsl_study_rooms>,
      <http://library.temple.edu/person/tiffany-ellis>,
+     <http://library.temple.edu/service/hsl_contact>,
      <http://library.temple.edu/person/jennifer-sanchez>,
      <http://library.temple.edu/person/justin-hercules>,
      <http://library.temple.edu/person/gerard-mahlman>,
      <http://library.temple.edu/person/royce-sargeant>,
+     <http://library.temple.edu/service/hsl_reference>,
      <http://library.temple.edu/person/erica-howell>,
      <http://library.temple.edu/person/kandy-dancy>,
+     <http://library.temple.edu/service/hsl_3d_printing>,
      <http://library.temple.edu/person/karen-burstein>,
      <http://library.temple.edu/person/mark-marchino>,
      <http://library.temple.edu/person/christopher-denison>,
@@ -2093,6 +2590,7 @@
      <http://library.temple.edu/person/stefan-del-cotto>,
      <http://library.temple.edu/person/michael-carroll>,
      <http://library.temple.edu/person/jordan-hample>,
+     <http://library.temple.edu/service/room_reservation1>,
      <http://library.temple.edu/group/ltd>,
      <http://library.temple.edu/person/philip-dandrea>,
      <http://library.temple.edu/person/karen-kohn>,
@@ -2106,6 +2604,7 @@
      <http://library.temple.edu/person/sarah-araujo>,
      <http://library.temple.edu/person/emily-schiller>,
      <http://library.temple.edu/person/james-robinson>,
+     <http://library.temple.edu/service/thinktank_contact>,
      <http://library.temple.edu/person/matthew-ainslie>,
      <http://library.temple.edu/person/john-pyle>,
      <http://library.temple.edu/person/rosa-grier>,
@@ -2135,6 +2634,7 @@
      <http://library.temple.edu/group/cams>,
      <http://library.temple.edu/person/sara-curnow-wilson>,
      <http://library.temple.edu/space/paley_study_spaces>,
+     <http://library.temple.edu/service/paley_study_rooms>,
      <http://library.temple.edu/person/kristina-devoe>,
      <http://library.temple.edu/space/paley_media>,
      <http://library.temple.edu/person/joe-lucia>,
@@ -2152,6 +2652,7 @@
      <http://library.temple.edu/person/molly-larkin>,
      <http://library.temple.edu/person/fred-rowland>,
      <http://library.temple.edu/person/holly-tomren>,
+     <http://library.temple.edu/service/dsc_3d_printing>,
      <http://library.temple.edu/space/paley_130>;
    <http://library.temple.edu/model#inEntity> <http://library.temple.edu/system/tul>;
    <http://library.temple.edu/model#type> <http://library.temple.edu/model/Library>,
